@@ -2,10 +2,16 @@
     "name": "pewhelp",
     "displayName": "PewHelp",
     "description": "An extension that gives advanced support for PewPew Live level creation.",
+    "publisher": "PapuasinisPingvinas",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.53.0"
     },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PapuasinisPingvinas/Pewhelp-vscode"
+      },
     "categories": [
         "Snippets"
     ],
