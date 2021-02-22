@@ -1,12 +1,32 @@
 {
     "pewpew": {
-      "prefix": ["pewpew"],
-      "body": ["pewpew."],
+      "prefix": "pewpew",
+      "body": "pewpew.",
       "description": "A main library for PewPew."
     },
     "fmath": {
-        "prefix": ["fmath"],
-        "body": ["fmath."],
-        "description": "A math library that calculates FixedPoint numbers."
+        "prefix": ["fmath", "math"],
+        "body": "fmath.",
+        "description": "An extended Lua math library with FixedPoint number support."
+    },
+    "stop_game": {
+      "prefix": "stop_game()",
+      "body": "stop_game()",
+      "description": "Stops the game."
+    },
+    "print": {
+      "prefix": "print()",
+      "body": "print()",
+      "description": "Prints to the console."
+    },
+    "new_baf": {
+      "prefix": "new_baf()",
+      "body": "new_baf(x, y, angle, speed, lifetime)",
+      "description": "Creates a new baf."
+    },
+    "new_inertiac": {
+      "prefix": "new_inertiac()",
+      "body": "new_inertiac(x, y, acceleration, angle)",
+      "description": "Creates a new inertiac."
     }
   }
