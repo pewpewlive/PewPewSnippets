@@ -1,0 +1,13 @@
+// in file 'Code/User/snippets/javascript.json'
+{
+    "pewpew": {
+      "prefix": ["pewpew"],
+      "body": ["pewpew."],
+      "description": "A main library for PewPew."
+    },
+    "fmath": {
+        "prefix": ["fmath"],
+        "body": ["fmath."],
+        "description": "A math library that calculates FixedPoint numbers."
+    }
+  }

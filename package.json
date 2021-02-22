@@ -1,0 +1,20 @@
+{
+    "name": "pewhelp",
+    "displayName": "PewHelp",
+    "description": "An extension that gives advanced support for PewPew Live level creation.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "lua",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}
