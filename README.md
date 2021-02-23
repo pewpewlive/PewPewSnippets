@@ -5,7 +5,7 @@ Download this extension:
 * VSIX extension: [Github Releases](https://github.com/PapuasinisPingvinas/Pewhelp-vscode/releases)
 * VSCode store: Coming soon!
 ## Building it
-You need to have node.js and vsce (`npm install -g vsce`).
+You need to have node.js and vsce `npm install -g vsce`.
 
 Then just do `vsce package` to package it to get VSIX extension.
 ## Contributing:

@@ -1,7 +1,7 @@
 {
     "name": "pewhelp",
     "displayName": "PewHelp",
-    "description": "An extension that gives advanced support for PewPew Live level creation.",
+    "description": "A VSCode extension that has useful snippets to enhance level creation for PewPew Live.",
     "publisher": "PapuasinisPingvinas",
     "version": "0.0.1",
     "engines": {
