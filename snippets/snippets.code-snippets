@@ -1,82 +1,102 @@
 {
-    "pewpew": {
-      "prefix": "pewpew",
-      "body": "pewpew.",
-      "description": "A main library for PewPew."
-    },
-    "fmath": {
-        "prefix": ["fmath", "math"],
-        "body": "fmath.",
-        "description": "An extended Lua math library with FixedPoint number support."
-    },
     "print": {
       "prefix": "print()",
-      "body": "print()",
+      "body": "pewpew.print(\"$0\")",
       "description": "Prints to the console."
     },
-    "new_baf": {
-      "prefix": "new_baf()",
-      "body": "new_baf(x, y, angle, speed, lifetime)",
-      "description": "Creates a new baf."
-    },
-    "new_inertiac": {
-      "prefix": "new_inertiac()",
-      "body": "new_inertiac(x, y, acceleration, angle)",
-      "description": "Creates a new inertiac."
-    },
     "print_debug_info": {
-      "prefix": "print_debug_info()",
-      "body": "print_debug_info()",
-      "description": "Prints debug information."
+      "prefix": ["debug()", "print_debug()"],
+      "body": "pewpew.print_debug_info()",
+      "description": "Prints the number of entities created and the amount of memory used by the script."
     },
     "set_level_size": {
       "prefix": "set_level_size()",
-      "body": "set_level_size(width, height)",
-      "description": "Sets playable are size."
+      "body": [
+        "local ${1:width} = 500fx",
+        "local ${2:height} = 500fx",
+        "pewpew.set_level_size(${3:width}, ${4:height})"
+      ],
+      "description": "Sets the level's size."
     },
     "add_wall": {
       "prefix": "add_wall()",
-      "body": "add_wall(start_x, start_y, end_x, end_y)",
-      "description": "Creates a wall entity via the wall API."
+      "body": "local ${1:wall_id} = pewpew.add_wall(${2:start_x}, ${3:start_y}, ${4:end_x}, ${5:end_y})",
+      "description": "Adds a wall to the level from (start_x,start_y) to (end_x,end_y), and returns its wall ID. Note: A maximum of 200 walls can be created."
     },
     "remove_wall": {
       "prefix": "remove_wall()",
-      "body": "remove_wall(wall_entity_id)",
-      "description": "Removes wall entity via the wall API."
+      "body": "pewpew.remove_wall(${1:wall_id})",
+      "description": "Remove the wall with the given wall_id."
+    },
+    "add_update_callback": {
+      "prefix": "add_update_callback()",
+      "body": [
+        "local ${1:time} = 0",
+        "pewpew.add_update_callback(function()",
+        "    ${2:time} = ${3:time} + 1",
+        "    $0",
+        "end)"
+      ],
+      "description": "Adds a callback that will be updated at each game tick."
     },
     "get_number_of_players": {
       "prefix": "get_number_of_players()",
-      "body": "get_number_of_players()",
+      "body": "local ${1:player_count} = pewpew.get_number_of_players()",
       "description": "Returns the number of players in the game."
     },
     "increase_score_of_player": {
       "prefix": "increase_score_of_player()",
-      "body": "increase_score_of_player(player_index, delta)",
-      "description": "Increases the score of the player."
-    },
-    "get_player_inputs": {
-      "prefix": "get_player_inputs()",
-      "body": "local move_angle, move_distance, shoot_angle, shoot_distance = pewpew.get_player_inputs(0)",
-      "description": "Returns the inputs of the player."
+      "body": "pewpew.increase_score_of_player(${1:player_index}, ${2:delta})",
+      "description": "Increases the score of the player at the specified player_index by an amount of delta."
     },
     "stop_game": {
       "prefix": "stop_game()",
-      "body": "stop_game()",
-      "description": "Stops the game."
+      "body": "pewpew.stop_game()",
+      "description": "Ends the current game."
+    },
+    "get_player_inputs": {
+      "prefix": "get_player_inputs()",
+      "body": "local ${1:move_angle}, ${2:move_distance}, ${3:shoot_angle}, ${4:shoot_distance} = pewpew.get_player_inputs(${5:player_index})",
+      "description": "Returns the inputs of the player at the specified index."
+    },
+    "get_score_of_player": {
+      "prefix": "get_score_of_player()",
+      "body": "local ${1:score} = pewpew.pewpew.get_score_of_player(${2:player_index})",
+      "description": "Returns the inputs of the player at the specified index."
     },
     "configure_player": {
       "prefix": "configure_player()",
-      "body": "configure_player(player_index, configuration)",
-      "description": "Configures the specified player."
+      "body": "pewpew.configure_player(${1:player_index}, ${2:{}})",
+      "description": "Configures the player at the specified player_index."
     },
     "get_player_configuration": {
       "prefix": "get_player_configuration()",
-      "body": "get_player_configuration(player_index)",
-      "description": "Gets the configuration of selected player."
+      "body": "local ${1:conf} = pewpew.get_player_configuration(${2:player_index})",
+      "description": "Returns a map containing the configuration of the player at the specified player_index."
     },
     "configure_player_ship_weapon": {
       "prefix": "configure_player_ship_weapon()",
-      "body": "configure_player_ship_weapon(ship_id, configuration)",
-      "description": "Stops the game."
+      "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, ${2:{}})",
+      "description": "Configures the weapon of the ship identified with ship_id using configuration."
     },
+    "add_damage_to_player_ship": {
+      "prefix": "add_damage_to_player_ship()",
+      "body": "pewpew.add_damage_to_player_ship(${1:ship_id}, ${2:damage})",
+      "description": "Reduces the amount of shield of the player that owns the ship by damage points."
+    },
+    "add_arrow_to_player_ship": {
+      "prefix": "add_arrow_to_player_ship()",
+      "body": "local ${1:arrow_id} = pewpew.add_arrow_to_player_ship(${2:ship_id}, ${3:target_id}, ${4:color})",
+      "description": "Adds an arrow to the ship identified with ship_id pointing towards the entity identified with target_id, and returns the ID of the arrow."
+    },
+    "remove_arrow_from_player_ship": {
+      "prefix": "remove_arrow_from_player_ship()",
+      "body": "pewpew.remove_arrow_from_player_ship(${1:ship_id}, ${2:arrow_id})",
+      "description": "Removes the arrow identified by arrow_id from the ship identified by ship_id."
+    },
+    "make_player_ship_transparent": {
+      "prefix": "make_player_ship_transparent()",
+      "body": "pewpew.make_player_ship_transparent(${1:ship_id}, ${2:transparency_duration})",
+      "description": "Makes the player ship transparent for transparency_duration game ticks."
+    }
   }
