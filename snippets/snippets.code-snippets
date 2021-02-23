@@ -9,11 +9,6 @@
         "body": "fmath.",
         "description": "An extended Lua math library with FixedPoint number support."
     },
-    "stop_game": {
-      "prefix": "stop_game()",
-      "body": "stop_game()",
-      "description": "Stops the game."
-    },
     "print": {
       "prefix": "print()",
       "body": "print()",
@@ -28,5 +23,60 @@
       "prefix": "new_inertiac()",
       "body": "new_inertiac(x, y, acceleration, angle)",
       "description": "Creates a new inertiac."
-    }
+    },
+    "print_debug_info": {
+      "prefix": "print_debug_info()",
+      "body": "print_debug_info()",
+      "description": "Prints debug information."
+    },
+    "set_level_size": {
+      "prefix": "set_level_size()",
+      "body": "set_level_size(width, height)",
+      "description": "Sets playable are size."
+    },
+    "add_wall": {
+      "prefix": "add_wall()",
+      "body": "add_wall(start_x, start_y, end_x, end_y)",
+      "description": "Creates a wall entity via the wall API."
+    },
+    "remove_wall": {
+      "prefix": "remove_wall()",
+      "body": "remove_wall(wall_entity_id)",
+      "description": "Removes wall entity via the wall API."
+    },
+    "get_number_of_players": {
+      "prefix": "get_number_of_players()",
+      "body": "get_number_of_players()",
+      "description": "Returns the number of players in the game."
+    },
+    "increase_score_of_player": {
+      "prefix": "increase_score_of_player()",
+      "body": "increase_score_of_player(player_index, delta)",
+      "description": "Increases the score of the player."
+    },
+    "get_player_inputs": {
+      "prefix": "get_player_inputs()",
+      "body": "local move_angle, move_distance, shoot_angle, shoot_distance = pewpew.get_player_inputs(0)",
+      "description": "Returns the inputs of the player."
+    },
+    "stop_game": {
+      "prefix": "stop_game()",
+      "body": "stop_game()",
+      "description": "Stops the game."
+    },
+    "configure_player": {
+      "prefix": "configure_player()",
+      "body": "configure_player(player_index, configuration)",
+      "description": "Configures the specified player."
+    },
+    "get_player_configuration": {
+      "prefix": "get_player_configuration()",
+      "body": "get_player_configuration(player_index)",
+      "description": "Gets the configuration of selected player."
+    },
+    "configure_player_ship_weapon": {
+      "prefix": "configure_player_ship_weapon()",
+      "body": "configure_player_ship_weapon(ship_id, configuration)",
+      "description": "Stops the game."
+    },
   }
