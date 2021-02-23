@@ -2,7 +2,7 @@
 A VSCode extension that has useful snippets to enhance level creation for PewPew Live.
 ## Usage:
 Download this extension:
-* VSIX extension: Coming soon! 
+* VSIX extension: [Github Releases](https://github.com/PapuasinisPingvinas/Pewhelp-vscode/releases)
 * VSCode store: Coming soon!
 ## Building it
 You need to have node.js and vsce (`npm install -g vsce`).
