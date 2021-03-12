@@ -99,5 +99,55 @@
       "prefix": "make_player_ship_transparent()",
       "body": "pewpew.make_player_ship_transparent(${1:ship_id}, ${2:transparency_duration})",
       "description": "Makes the player ship transparent for transparency_duration game ticks."
-    }
+    },
+    "get_entity_count":{
+      "prefix": "get_enity_count()",
+      "body": "pewpew.get_enity_count(${1:type})",
+      "description": "Returns the number of entities of specified type that are alive."
+    },
+    "play_ambient_sound":{
+      "prefix": "play_ambient_sound()",
+      "body": "pewpew.play_ambient_sound(${1:sound_path}, ${2:index})",
+      "description": "Plays the sound described at sound_path at the specified index."
+    },
+    "play_sound":{
+      "prefix": "play_sound()",
+      "body": "pewpew.play_sound(${1:sound_path}, ${2:index}, ${3:x}, ${4:y})",
+      "description": "Plays the sound described at sound_path at the specified in-game location."
+    },
+    "create_explosion":{
+      "prefix": "create_explosion()",
+      "body": "pewpew.create_explosion(${1:x}, ${2:y}, ${3:color}, ${4:scale}, ${5:particle_count})",
+      "description": "Creates an explosion of particles at the specified location. Scale within the range [0, 10] and particle_count in the range [1, 100].",
+    },
+    "new_asteroid":{
+      "prefix": "new_asteroid()",
+      "body": "pewpew.new_asteroid(${1:x}, ${2:y})",
+      "description": "Creates a new Asteroid at the specified location and returns its entityId.",
+    },
+    "new_baf":{
+      "prefix": "new_baf()",
+      "body": "pewpew.new_baf(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
+      "description": "Creates a new BAF at the specified location, and returns its entityId."
+    },
+    "new_bomb":{
+      "prefix": "new_bomb()",
+      "body": "pewpew.new_bomb(${1:x}, ${2:y}, ${3:type})",
+      "description": "Creates a new Bomb at the specified location, and returns its entityId."
+    },
+    "new_customizable_entity":{
+      "prefix": "new_customizable_entity()",
+      "body": "pewpew.new_customizable_entity(${1:x}, ${2:y})",
+      "description": "Creates a new customizable entity at the specified location, and returns its entityId."
+    },
+    "new_inertiac":{
+      "prefix": "new_inertiac()",
+      "body": "pewpew.new_inertiac(${1:x}, ${2:y}, ${3:acceleration}, ${1:angle})",
+      "description": "Creates a new Inertiac at the specified location, and returns its entityId."
+    },
+    "new_mothership":{
+      "prefix": "new_mothership()",
+      "body": "new_mothership(${1:x}, ${2:y}, ${3:type}, ${4:angle})",
+      "description": "Creates a new Mothership at the specified location, and returns its entityId."
+    },
   }
