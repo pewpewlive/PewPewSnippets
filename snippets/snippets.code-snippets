@@ -13,9 +13,7 @@
     "set_level_size": {
       "prefix": "set_level_size()",
       "body": [
-        "local ${1:width} = 500fx",
-        "local ${2:height} = 500fx",
-        "pewpew.set_level_size(${3:width}, ${4:height})"
+        "pewpew.set_level_size(${1:width}, ${2:height})"
       ],
       "description": "Sets the level's size."
     },
@@ -32,11 +30,7 @@
     "add_update_callback": {
       "prefix": "add_update_callback()",
       "body": [
-        "local ${1:time} = 0",
-        "pewpew.add_update_callback(function()",
-        "    ${2:time} = ${3:time} + 1",
-        "    $0",
-        "end)"
+        "pewpew.add_update_callback(${1:callback_function})"
       ],
       "description": "Adds a callback that will be updated at each game tick."
     },
