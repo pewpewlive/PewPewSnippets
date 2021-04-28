@@ -3,7 +3,6 @@ A VSCode extension that has useful snippets to enhance level creation for PewPew
 ## Usage:
 Download this extension:
 * VSIX extension: [Github Releases](https://github.com/PapuasinisPingvinas/Pewhelp-vscode/releases)
-* PewPew Tools installer: [Download PewPewTools](https://github.com/PapuasinisPingvinas/PewPew-Tools)
 * VSCode marketplace: Not available
 
 ## Building it
