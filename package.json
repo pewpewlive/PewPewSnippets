@@ -3,7 +3,7 @@
     "displayName": "PewHelp",
     "description": "A VSCode extension that has useful snippets to enhance level creation for PewPew Live.",
     "publisher": "Tasty-Kiwi",
-    "version": "1.0.0",
+    "version": "1.0.0-pre1",
     "engines": {
         "vscode": "^1.53.0"
     },
