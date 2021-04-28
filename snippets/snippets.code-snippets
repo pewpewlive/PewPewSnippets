@@ -1,8 +1,13 @@
 {
+    /*
+
+        Pewhelp snippets. Copyright (c) 2021 Tasty Kiwi (Dominykas M.). This project is licensed under MIT license.
+
+    */
     /*  pewpew library snippets  */
     "print": {
       "prefix": "print()",
-      "body": "pewpew.print(\"$0\")",
+      "body": "pewpew.print(${1:string})",
       "description": "Prints to the console."
     },
     "print_debug_info": {
@@ -141,8 +146,204 @@
     },
     "new_mothership":{
       "prefix": "new_mothership()",
-      "body": "new_mothership(${1:x}, ${2:y}, ${3:type}, ${4:angle})",
+      "body": "pewpew.new_mothership(${1:x}, ${2:y}, ${3:type}, ${4:angle})",
       "description": "Creates a new Mothership at the specified location, and returns its entityId."
+    },
+    "new_player_ship":{
+      "prefix": "new_player_ship()",
+      "body": "pewpew.new_player_ship(${1:x}, ${2:y}, ${3:player_index})",
+      "description": "Creates a new Player Ship at the specified location for the player identified by player_index, and returns its entityId."
+    },
+    "new_rolling_cube":{
+      "prefix": "new_rolling_cube()",
+      "body": "pewpew.new_rolling_cube(${1:x}, ${2:y})",
+      "description": "Creates a new Rolling Cube at the specified location, and returns its entityId."
+    },
+    "new_rolling_sphere":{
+      "prefix": "new_rolling_sphere()",
+      "body": "pewpew.new_rolling_cube(${1:x}, ${2:y}, ${3:angle}, ${4:speed})",
+      "description": "Creates a new Rolling Sphere at the specified location, and returns its entityId."
+    },
+    "new_wary":{
+      "prefix": "new_wary()",
+      "body": "pewpew.new_wary(${1:x}, ${2:y})",
+      "description": "Creates a new Wary at the specified location, and returns its entityId."
+    },
+    "new_ufo":{
+      "prefix": "new_ufo()",
+      "body": "pewpew.new_ufo(${1:x}, ${2:y}, ${3:dx})",
+      "description": "Creates a new UFO at the specified location, moving horizontally at the speed of dx, and returns its entityId."
+    },
+    "rolling_cube_set_enable_collisions_with_walls":{
+      "prefix": "rolling_cube_set_enable_collisions_with_walls()",
+      "body": "pewpew.rolling_cube_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls?})",
+      "description": "Sets whether the Rolling Cube identified with id collides with walls. By default it does not."
+    },
+    "ufo_set_enable_collisions_with_walls":{
+      "prefix": "ufo_set_enable_collisions_with_walls()",
+      "body": "pewpew.rolling_cube_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls?})",
+      "description": "Sets whether the UFO identified with id collides with walls. By default it does not."
+    },
+    "entity_get_position":{
+      "prefix": "entity_get_position()",
+      "body": "pewpew.entity_get_position(${1:entity_id})",
+      "description": "Returns the position of the entity identified by id."
+    },
+    "entity_get_is_alive":{
+      "prefix": "entity_get_is_alive()",
+      "body": "pewpew.entity_get_is_alive(${1:entity_id})",
+      "description": "Returns whether the entity identified by id is alive or not."
+    },
+    "entity_get_is_started_to_be_destroyed":{
+      "prefix": "entity_get_is_started_to_be_destroyed()",
+      "body": "pewpew.entity_get_is_started_to_be_destroyed(${1:entity_id})",
+      "description": "Returns whether the entity identified by id is in the process of being destroyed. Returns false if the entity does not exist."
+    },
+    "entity_set_position":{
+      "prefix": "entity_set_position()",
+      "body": "pewpew.entity_set_position(${1:entity_id}, ${2:x}, ${3:y})",
+      "description": "Sets the position of the entity identified by id to specified position."
+    },
+    "entity_set_radius":{
+      "prefix": "entity_set_radius()",
+      "body": "pewpew.entity_set_radius(${1:entity_id}, ${2:radius})",
+      "description": "Sets the radius of the entity identified by id. To give you a sense of scale, motherships have a radius of 28fx."
+    },
+    "entity_set_update_callback":{
+      "prefix": "entity_set_update_callback()",
+      "body": "pewpew.entity_set_update_callback(${1:entity_id}, ${2:callback_function})",
+      "description": "Sets a callback that will be called at every tick as long as the entity identified by id is alive. The callbacks gets called with the entityId."
+    },
+    "entity_destroy":{
+      "prefix": "entity_destroy()",
+      "body": "pewpew.entity_destroy(${1:entity_id})",
+      "description": "Makes the entity identified by id immediately disappear forever."
+    },
+    "customizable_entity_set_position_interpolation":{
+      "prefix": "customizable_entity_set_position_interpolation()",
+      "body": "pewpew.customizable_entity_set_position_interpolation(${1:entity_id}, ${2:enabled})",
+      "description": "Sets whether the position of the mesh wil be interpolated when rendering."
+    },
+    "customizable_entity_set_mesh":{
+      "prefix": "customizable_entity_set_mesh()",
+      "body": "pewpew.customizable_entity_set_mesh(${1:entity_id}, ${2:file_path}, ${3:index})",
+      "description": "Sets the mesh of the customizable entity identified by id to the mesh described in the file file_path at the specified index."
+    },
+    "customizable_entity_set_flipping_meshes":{
+      "prefix": "customizable_entity_set_flipping_meshes()",
+      "body": "pewpew.customizable_entity_set_flipping_meshes(${1:entity_id}, ${2:file_path}, ${3:index_0}, ${4:index_1})",
+      "description": "Similar to customizable_entity_set_mesh, but sets two meshes that will be used in alternation."
+    },
+    "customizable_entity_set_mesh_color":{
+      "prefix": "customizable_entity_set_mesh_color()",
+      "body": "pewpew.customizable_entity_set_mesh_color(${1:entity_id}, ${2:color})",
+      "description": "Sets the color multiplier for the mesh of the customizable entity identified by id."
+    },
+    "customizable_entity_set_string":{
+      "prefix": "customizable_entity_set_string()",
+      "body": "pewpew.customizable_entity_set_string(${1:entity_id}, ${2:text})",
+      "description": "Sets the string to be displayed as part of the mesh of the customizable entity identified by id."
+    },
+    "customizable_entity_set_mesh_z":{
+      "prefix": "customizable_entity_set_mesh_z()",
+      "body": "pewpew.customizable_entity_set_mesh_z(${1:entity_id}, ${2:z})",
+      "description": "Sets the height of the mesh of the customizable entity identified by id."
+    },
+    "customizable_entity_set_mesh_scale":{
+      "prefix": "customizable_entity_set_mesh_scale()",
+      "body": "pewpew.customizable_entity_set_mesh_scale(${1:entity_id}, ${2:scale})",
+      "description": "Sets the scale of the mesh of the customizable entity identified by id."
+    },
+    "customizable_entity_set_mesh_angle":{
+      "prefix": "customizable_entity_set_mesh_angle()",
+      "body": "pewpew.customizable_entity_set_mesh_angle(${1:entity_id}, ${2:angle}, ${3:x_axis}, ${4:y_axis}, ${5:z_axis})",
+      "description": "Sets the rotation angle of the mesh of the customizable entity identified by id."
+    },
+    "customizable_entity_set_visibility_radius":{
+      "prefix": "customizable_entity_set_visibility_radius()",
+      "body": "pewpew.customizable_entity_set_visibility_radius(${1:x}, ${2:y})",
+      "description": "Sets the radius defining the visibility of the entity."
+    },
+    "customizable_entity_configure_wall_collision":{
+      "prefix": "customizable_entity_configure_wall_collision()",
+      "body": "pewpew.customizable_entity_configure_wall_collision(${1:entity_id}, ${3:collide_with_walls?}, ${4:callback_function})",
+      "description": "WIP"
+    },
+    "customizable_entity_set_player_collision_callback":{
+      "prefix": "customizable_entity_set_player_collision_callback()",
+      "body": "pewpew.customizable_entity_set_player_collision_callback(${1:entity_id}, ${2:callback_function})",
+      "description": "Sets the callback for when the customizable entity identified by id collides with a player's ship."
+    },
+    "customizable_entity_set_weapon_collision_callback":{
+      "prefix": "customizable_entity_set_weapon_collision_callback()",
+      "body": "pewpew.customizable_entity_set_weapon_collision_callback(${1:entity_id}, ${2:callback_function})",
+      "description": "Sets the callback for when the customizable entity identified by id collides with a player's weapon."
+    },
+    "customizable_entity_start_spawning":{
+      "prefix": "customizable_entity_start_spawning()",
+      "body": "pewpew.customizable_entity_start_spawning(${1:entity_id}, ${2:spawning_duration})",
+      "description": "Makes the customizable entity identified by id spawn for a specified duration in game ticks."
+    },
+    "customizable_entity_start_exploding":{
+      "prefix": "customizable_entity_start_spawning()",
+      "body": "pewpew.customizable_entity_start_spawning(${1:entity_id}, ${2:explosion_duration})",
+      "description": "Makes the customizable entity identified by id explode for a specified duration in game ticks."
+    },
+    /*  fmath library snippets  */
+    "max_fixedpoint":{
+      "prefix": "max_fixedpoint()",
+      "body": "fmath.max_fixedpoint()",
+      "description": "Returns the maximum value a fixedpoint integer can take."
+    },
+    "random_fixedpoint":{
+      "prefix": "random_fixedpoint()",
+      "body": "fmath.random_fixedpoint(${1:min}, ${2:max})",
+      "description": "Returns an integer in the range [min, max]. max must be greater or equal to min."
+    },
+    "random_int":{
+      "prefix": "random_int()",
+      "body": "fmath.random_int(${1:min}, ${2:max})",
+      "description": "Returns an integer in the range [min, max]. max must be greater or equal to min."
+    },
+    "sqrt":{
+      "prefix": "sqrt()",
+      "body": "fmath.sqrt(${1:x})",
+      "description": "Returns the square root of x. x must be greater or equal to 0."
+    },
+    "from_fraction":{
+      "prefix": "from_fraction()",
+      "body": "fmath.from_fraction(${1:numerator}, ${2:denominator})",
+      "description": "Returns the fixedpoint value representing the fraction numerator/denominator. denominator must not be equal to 0."
+    },
+    "to_int":{
+      "prefix": "to_int()",
+      "body": "fmath.to_int(${1:min}, ${2:max})",
+      "description": "Returns the integral part of the specified value."
+    },
+    "abs_fixedpoint":{
+      "prefix": "abs_fixedpoint()",
+      "body": "fmath.abs_fixedpoint(${1:value})",
+      "description": "Returns the absolute value."
+    },
+    "to_fixedpoint":{
+      "prefix": "to_fixedpoint()",
+      "body": "fmath.to_fixedpoint(${1:value})",
+      "description": "Returns a fixedpoint value with the integral part of the specified value, and no fractional part."
+    },
+    "sincos":{
+      "prefix": "sincos()",
+      "body": "fmath.sincos(${1:angle})",
+      "description": "Returns the sinus and cosinus of the specified angle. The angle is in radian."
+    },
+    "atan2":{
+      "prefix": "atan2()",
+      "body": "fmath.atan2(${1:y}, ${2:x})",
+      "description": "Returns the principal value of the arc tangent of y/x. Returns a value in the range [0, 2π[."
+    },
+    "tau":{
+      "prefix": "tau()",
+      "body": "fmath.tau()",
+      "description": "Returns τ (aka 2π)."
     },
   }
   
