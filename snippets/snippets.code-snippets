@@ -339,5 +339,162 @@
       "body": "fmath.tau()",
       "description": "Returns τ (aka 2π)."
     },
-  }
+    /* pewpew Library Enum snippets */
+    "EntityType.ASTEROID":{
+      "prefix": "EntityType.ASTEROID",
+      "body": "pewpew.EntityType.ASTEROID"
+    },
+    "EntityType.BAF":{
+      "prefix": "EntityType.BAF",
+      "body": "pewpew.EntityType.BAF"
+    },
+    "EntityType.CROWDER":{
+      "prefix": "EntityType.CROWDER",
+      "body": "pewpew.EntityType.CROWDER"
+    },
+    "EntityType.INERTIAC":{
+      "prefix": "EntityType.INERTIAC",
+      "body": "pewpew.EntityType.INERTIAC"
+    },
+    "EntityType.MOTHERSHIP":{
+      "prefix": "EntityType.MOTHERSHIP",
+      "body": "pewpew.EntityType.MOTHERSHIP"
+    },
+    "EntityType.MOTHERSHIP_BULLET":{
+      "prefix": "EntityType.MOTHERSHIP_BULLET",
+      "body": "pewpew.EntityType.MOTHERSHIP_BULLET"
+    },
+    "EntityType.ROLLING_CUBE":{
+      "prefix": "EntityType.ROLLING_CUBE",
+      "body": "pewpew.EntityType.ROLLING_CUBE"
+    },
+    "EntityType.ROLLING_SPHERE":{
+      "prefix": "EntityType.ROLLING_SPHERE",
+      "body": "pewpew.EntityType.ROLLING_SPHERE"
+    },
+    "EntityType.UFO":{
+      "prefix": "EntityType.UFO",
+      "body": "pewpew.EntityType.UFO"
+    },
+    "EntityType.WARY":{
+      "prefix": "EntityType.WARY",
+      "body": "pewpew.EntityType.WARY"
+    },
+    "MothershipType.THREE_CORNERS":{
+      "prefix": "MothershipType.THREE_CORNERS",
+      "body": "pewpew.MothershipType.THREE_CORNERS"
+    },
+    "MothershipType.FOUR_CORNERS":{
+      "prefix": "MothershipType.FOUR_CORNERS",
+      "body": "pewpew.MothershipType.FOUR_CORNERS"
+    },
+    "MothershipType.FIVE_CORNERS":{
+      "prefix": "MothershipType.FIVE_CORNERS",
+      "body": "pewpew.MothershipType.FIVE_CORNERS"
+    },
+    "MothershipType.SIX_CORNERS":{
+      "prefix": "MothershipType.SIX_CORNERS",
+      "body": "pewpew.MothershipType.SIX_CORNERS"
+    },
+    "MothershipType.SEVEN_CORNERS":{
+      "prefix": "MothershipType.SEVEN_CORNERS",
+      "body": "pewpew.MothershipType.SEVEN_CORNERS"
+    },
+    "CannonType.SINGLE":{
+      "prefix": "CannonType.SINGLE",
+      "body": "pewpew.CannonType.SINGLE"
+    },
+    "CannonType.TIC_TOC":{
+      "prefix": "CannonType.TIC_TOC",
+      "body": "pewpew.CannonType.TIC_TOC"
+    },
+    "CannonType.DOUBLE":{
+      "prefix": "CannonType.DOUBLE",
+      "body": "pewpew.CannonType.DOUBLE"
+    },
+    "CannonType.TRIPLE":{
+      "prefix": "CannonType.TRIPLE",
+      "body": "pewpew.CannonType.TRIPLE"
+    },
+    "CannonType.FOUR_DIRECTIONS":{
+      "prefix": "CannonType.FOUR_DIRECTIONS",
+      "body": "pewpew.CannonType.FOUR_DIRECTIONS"
+    },
+    "CannonType.DOUBLE_SWIPE":{
+      "prefix": "CannonType.DOUBLE_SWIPE",
+      "body": "pewpew.CannonType.DOUBLE_SWIPE"
+    },
+    "CannonType.HEMISPHERE":{
+      "prefix": "CannonType.HEMISPHERE",
+      "body": "pewpew.CannonType.HEMISPHERE"
+    },
+    "CannonFrequency.FREQ_1":{
+      "prefix": "CannonFrequency.FREQ_1",
+      "body": "pewpew.CannonFrequency.FREQ_1"
+    },
+    "CannonFrequency.FREQ_2":{
+      "prefix": "CannonFrequency.FREQ_2",
+      "body": "pewpew.CannonFrequency.FREQ_2"
+    },
+    "CannonFrequency.FREQ_3":{
+      "prefix": "CannonFrequency.FREQ_3",
+      "body": "pewpew.CannonFrequency.FREQ_3"
+    },
+    "CannonFrequency.FREQ_5":{
+      "prefix": "CannonFrequency.FREQ_5",
+      "body": "pewpew.CannonFrequency.FREQ_5"
+    },
+    "CannonFrequency.FREQ_6":{
+      "prefix": "CannonFrequency.FREQ_6",
+      "body": "pewpew.CannonFrequency.FREQ_6"
+    },
+    "CannonFrequency.FREQ_7_5":{
+      "prefix": "CannonFrequency.FREQ_7_5",
+      "body": "pewpew.CannonFrequency.FREQ_7_5"
+    },
+    "CannonFrequency.FREQ_10":{
+      "prefix": "CannonFrequency.FREQ_10",
+      "body": "pewpew.CannonFrequency.FREQ_10"
+    },
+    "CannonFrequency.FREQ_15":{
+      "prefix": "CannonFrequency.FREQ_15",
+      "body": "pewpew.CannonFrequency.FREQ_15"
+    },
+    "CannonFrequency.FREQ_30":{
+      "prefix": "CannonFrequency.FREQ_30",
+      "body": "pewpew.CannonFrequency.FREQ_30"
+    },
+    "BombType.FREEZE":{
+      "prefix": "BombType.FREEZE",
+      "body": "pewpew.BombType.FREEZE"
+    },
+    "BombType.REPULSIVE":{
+      "prefix": "BombType.REPULSIVE",
+      "body": "pewpew.BombType.REPULSIVE"
+    },
+    "BombType.ATOMIZE":{
+      "prefix": "BombType.ATOMIZE",
+      "body": "pewpew.BombType.ATOMIZE"
+    },
+    "BombType.SMALL_ATOMIZE":{
+      "prefix": "BombType.SMALL_ATOMIZE",
+      "body": "pewpew.BombType.SMALL_ATOMIZE"
+    },
+    "WeaponType.BULLET":{
+      "prefix": "WeaponType.BULLET",
+      "body": "pewpew.WeaponType.BULLET"
+    },
+    "WeaponType.FREEZE_EXPLOSION":{
+      "prefix": "WeaponType.FREEZE_EXPLOSION",
+      "body": "pewpew.WeaponType.FREEZE_EXPLOSION"
+    },
+    "WeaponType.REPULSIVE_EXPLOSION":{
+      "prefix": "WeaponType.REPULSIVE_EXPLOSION",
+      "body": "pewpew.WeaponType.REPULSIVE_EXPLOSION"
+    },
+    "WeaponType.ATOMIZE_EXPLOSION":{
+      "prefix": "WeaponType.ATOMIZE_EXPLOSION",
+      "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
+    },
+}
   
