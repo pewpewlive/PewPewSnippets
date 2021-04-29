@@ -150,7 +150,7 @@
     },
     "new_rolling_cube":{
       "prefix": "new_rolling_cube()",
-      "body": "pewpew.new_rolling_cube(${2:x}, ${3:y})",
+      "body": "pewpew.new_rolling_cube(${1:x}, ${2:y})",
       "description": "Creates a new Rolling Cube at the specified location, and returns its entityId."
     },
     "new_rolling_sphere":{
