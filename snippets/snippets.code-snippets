@@ -1,30 +1,26 @@
 {
     /*
-
         Pewhelp snippets. Copyright (c) 2021 Tasty Kiwi (Dominykas M.). This project is licensed under MIT license.
-
     */
-    /*  pewpew library snippets  */
+    /*  pewpew Library snippets  */
     "print": {
       "prefix": "print()",
-      "body": "pewpew.print(${1:string})",
+      "body": "pewpew.print(${1:str})",
       "description": "Prints to the console."
     },
     "print_debug_info": {
-      "prefix": ["debug()", "print_debug()"],
+      "prefix": "print_debug_info()",
       "body": "pewpew.print_debug_info()",
       "description": "Prints the number of entities created and the amount of memory used by the script."
     },
     "set_level_size": {
       "prefix": "set_level_size()",
-      "body": [
-        "pewpew.set_level_size(${1:width}, ${2:height})"
-      ],
+      "body": "pewpew.set_level_size(${1:width}, ${2:height})",
       "description": "Sets the level's size."
     },
     "add_wall": {
       "prefix": "add_wall()",
-      "body": "local ${1:wall_id} = pewpew.add_wall(${2:start_x}, ${3:start_y}, ${4:end_x}, ${5:end_y})",
+      "body": "pewpew.add_wall(${1:start_x}, ${2:start_y}, ${3:end_x}, ${4:end_y})",
       "description": "Adds a wall to the level from (start_x,start_y) to (end_x,end_y), and returns its wall ID. Note: A maximum of 200 walls can be created."
     },
     "remove_wall": {
@@ -34,20 +30,18 @@
     },
     "add_update_callback": {
       "prefix": "add_update_callback()",
-      "body": [
-        "pewpew.add_update_callback(${1:callback_function})"
-      ],
+      "body": "pewpew.add_update_callback(${1:callback_function})",
       "description": "Adds a callback that will be updated at each game tick."
     },
     "get_number_of_players": {
       "prefix": "get_number_of_players()",
-      "body": "local ${1:player_count} = pewpew.get_number_of_players()",
+      "body": "pewpew.get_number_of_players()",
       "description": "Returns the number of players in the game."
     },
     "increase_score_of_player": {
       "prefix": "increase_score_of_player()",
       "body": "pewpew.increase_score_of_player(${1:player_index}, ${2:delta})",
-      "description": "Increases the score of the player at the specified player_index by an amount of delta."
+      "description": "Increases the score of the player at the specified player_index by an amount of delta. Note that delta can be negative."
     },
     "stop_game": {
       "prefix": "stop_game()",
@@ -61,8 +55,8 @@
     },
     "get_score_of_player": {
       "prefix": "get_score_of_player()",
-      "body": "local ${1:score} = pewpew.pewpew.get_score_of_player(${2:player_index})",
-      "description": "Returns the inputs of the player at the specified index."
+      "body": "pewpew.get_score_of_player(${1:player_index})",
+      "description": "Returns the score of the player at the specified player_index."
     },
     "configure_player": {
       "prefix": "configure_player()",
@@ -71,7 +65,7 @@
     },
     "get_player_configuration": {
       "prefix": "get_player_configuration()",
-      "body": "local ${1:conf} = pewpew.get_player_configuration(${2:player_index})",
+      "body": "pewpew.get_player_configuration(${1:player_index})",
       "description": "Returns a map containing the configuration of the player at the specified player_index."
     },
     "configure_player_ship_weapon": {
@@ -86,7 +80,7 @@
     },
     "add_arrow_to_player_ship": {
       "prefix": "add_arrow_to_player_ship()",
-      "body": "local ${1:arrow_id} = pewpew.add_arrow_to_player_ship(${2:ship_id}, ${3:target_id}, ${4:color})",
+      "body": "pewpew.add_arrow_to_player_ship(${1:ship_id}, ${2:target_id}, ${3:color})",
       "description": "Adds an arrow to the ship identified with ship_id pointing towards the entity identified with target_id, and returns the ID of the arrow."
     },
     "remove_arrow_from_player_ship": {
@@ -117,7 +111,7 @@
     "create_explosion":{
       "prefix": "create_explosion()",
       "body": "pewpew.create_explosion(${1:x}, ${2:y}, ${3:color}, ${4:scale}, ${5:particle_count})",
-      "description": "Creates an explosion of particles at the specified location. Scale within the range [0, 10] and particle_count in the range [1, 100].",
+      "description": "Creates an explosion of particles at the specified location. Scale is within the range [0, 10] and particle_count is in the range [1, 100].",
     },
     "new_asteroid":{
       "prefix": "new_asteroid()",
@@ -141,7 +135,7 @@
     },
     "new_inertiac":{
       "prefix": "new_inertiac()",
-      "body": "pewpew.new_inertiac(${1:x}, ${2:y}, ${3:acceleration}, ${1:angle})",
+      "body": "pewpew.new_inertiac(${1:x}, ${2:y}, ${3:acceleration}, ${4:angle})",
       "description": "Creates a new Inertiac at the specified location, and returns its entityId."
     },
     "new_mothership":{
@@ -156,12 +150,12 @@
     },
     "new_rolling_cube":{
       "prefix": "new_rolling_cube()",
-      "body": "pewpew.new_rolling_cube(${1:x}, ${2:y})",
+      "body": "pewpew.new_rolling_cube(${2:x}, ${3:y})",
       "description": "Creates a new Rolling Cube at the specified location, and returns its entityId."
     },
     "new_rolling_sphere":{
       "prefix": "new_rolling_sphere()",
-      "body": "pewpew.new_rolling_cube(${1:x}, ${2:y}, ${3:angle}, ${4:speed})",
+      "body": "pewpew.new_rolling_sphere(${1:x}, ${2:y}, ${3:angle}, ${4:speed})",
       "description": "Creates a new Rolling Sphere at the specified location, and returns its entityId."
     },
     "new_wary":{
@@ -176,12 +170,12 @@
     },
     "rolling_cube_set_enable_collisions_with_walls":{
       "prefix": "rolling_cube_set_enable_collisions_with_walls()",
-      "body": "pewpew.rolling_cube_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls?})",
+      "body": "pewpew.rolling_cube_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls})",
       "description": "Sets whether the Rolling Cube identified with id collides with walls. By default it does not."
     },
     "ufo_set_enable_collisions_with_walls":{
       "prefix": "ufo_set_enable_collisions_with_walls()",
-      "body": "pewpew.rolling_cube_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls?})",
+      "body": "pewpew.ufo_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls})",
       "description": "Sets whether the UFO identified with id collides with walls. By default it does not."
     },
     "entity_get_position":{
@@ -222,7 +216,7 @@
     "customizable_entity_set_position_interpolation":{
       "prefix": "customizable_entity_set_position_interpolation()",
       "body": "pewpew.customizable_entity_set_position_interpolation(${1:entity_id}, ${2:enabled})",
-      "description": "Sets whether the position of the mesh wil be interpolated when rendering."
+      "description": "Sets whether the position of the mesh will be interpolated when rendering."
     },
     "customizable_entity_set_mesh":{
       "prefix": "customizable_entity_set_mesh()",
@@ -232,7 +226,7 @@
     "customizable_entity_set_flipping_meshes":{
       "prefix": "customizable_entity_set_flipping_meshes()",
       "body": "pewpew.customizable_entity_set_flipping_meshes(${1:entity_id}, ${2:file_path}, ${3:index_0}, ${4:index_1})",
-      "description": "Similar to customizable_entity_set_mesh, but sets two meshes that will be used in alternation."
+      "description": "Similar to customizable_entity_set_mesh, but sets two meshes that will be used in alternation. By specifying 2 separate meshes, 60 fps animations can be achieved."
     },
     "customizable_entity_set_mesh_color":{
       "prefix": "customizable_entity_set_mesh_color()",
@@ -257,17 +251,17 @@
     "customizable_entity_set_mesh_angle":{
       "prefix": "customizable_entity_set_mesh_angle()",
       "body": "pewpew.customizable_entity_set_mesh_angle(${1:entity_id}, ${2:angle}, ${3:x_axis}, ${4:y_axis}, ${5:z_axis})",
-      "description": "Sets the rotation angle of the mesh of the customizable entity identified by id."
+      "description": "Sets the rotation angle of the mesh of the customizable entity identified by id. The rotation is applied along the axis defined by x_axis,y_axis,z_axis."
     },
     "customizable_entity_set_visibility_radius":{
       "prefix": "customizable_entity_set_visibility_radius()",
-      "body": "pewpew.customizable_entity_set_visibility_radius(${1:x}, ${2:y})",
-      "description": "Sets the radius defining the visibility of the entity."
+      "body": "pewpew.customizable_entity_set_visibility_radius(${1:entity_id}, ${2:radius})",
+      "description": "Sets the radius defining the visibility of the entity. This allows the game to know when an entity is actually visible, which in turns allows to massively optimize the rendering."
     },
     "customizable_entity_configure_wall_collision":{
       "prefix": "customizable_entity_configure_wall_collision()",
-      "body": "pewpew.customizable_entity_configure_wall_collision(${1:entity_id}, ${3:collide_with_walls?}, ${4:callback_function})",
-      "description": "WIP"
+      "body": "pewpew.customizable_entity_configure_wall_collision(${1:entity_id}, ${3:collide_with_walls}, ${4:callback_function})",
+      "description": "Sets the callback for when the customizable entity identified by id collides with a wall. collide_with_walls configures whether the entity should stop when colliding with walls."
     },
     "customizable_entity_set_player_collision_callback":{
       "prefix": "customizable_entity_set_player_collision_callback()",
@@ -285,8 +279,8 @@
       "description": "Makes the customizable entity identified by id spawn for a specified duration in game ticks."
     },
     "customizable_entity_start_exploding":{
-      "prefix": "customizable_entity_start_spawning()",
-      "body": "pewpew.customizable_entity_start_spawning(${1:entity_id}, ${2:explosion_duration})",
+      "prefix": "customizable_entity_start_exploding()",
+      "body": "pewpew.customizable_entity_start_exploding(${1:entity_id}, ${2:explosion_duration})",
       "description": "Makes the customizable entity identified by id explode for a specified duration in game ticks."
     },
     /*  fmath library snippets  */
