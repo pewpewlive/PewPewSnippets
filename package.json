@@ -1,9 +1,14 @@
 {
-    "name": "pewhelp",
-    "displayName": "PewHelp",
-    "description": "A VSCode extension that has useful snippets to enhance level creation for PewPew Live.",
+    "name": "pewpew-snippets",
+    "displayName": "PewPew Snippets",
+    "description": "A Visual Studio Code extension that has useful snippets to enhance level creation for PewPew Live.",
     "publisher": "Tasty-Kiwi",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "badges": [{
+            "url": "https://img.shields.io/badge/Come%20to%20see%20our-GitHub%20repository-success?style=for-the-badge&logo=github",
+            "href": "https://github.com/Tasty-Kiwi/Pewhelp-vscode",
+            "description": "Come to see our GitHub repository"
+        }],
     "engines": {
         "vscode": "^1.53.0"
     },
