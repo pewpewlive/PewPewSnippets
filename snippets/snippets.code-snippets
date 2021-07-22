@@ -101,12 +101,12 @@
         "set_key_value": {
           "prefix": "set_key_value()",
           "body": "pewpew.set_key_value(${1:player_index}, ${2:key}, ${3:value})",
-          "description": "** UNSTABLE API ** Sets value to the given key."
+          "description": "** UNSTABLE API ** ** DO NOT USE THIS IN PUBLIC LEVELS ** Sets value to the given key."
         },
         "get_key_value": {
           "prefix": "get_key_value()",
           "body": "pewpew.get_key_value(${1:player_index}, ${2:key})",
-          "description": "** UNSTABLE API ** Gets value from the given key."
+          "description": "** UNSTABLE API ** ** DO NOT USE THIS IN PUBLIC LEVELS ** Gets value from the given key."
         },
         "get_entities_colliding_with_disk":{
           "prefix": "get_entities_colliding_with_disk()",
@@ -560,5 +560,5 @@
         "WeaponType_ATOMIZE_EXPLOSION":{
           "prefix": "WeaponType.ATOMIZE_EXPLOSION",
           "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
-        },
+        }
       }
