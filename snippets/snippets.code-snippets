@@ -98,6 +98,10 @@
           "body": "pewpew.set_player_ship_speed(${1:ship_id}, ${2:factor}, ${3:offset}, ${4:duration})",
           "description": "Sets and returns the effective speed of the specified player ship as a function of the base speed of the ship."
         },
+        /*
+
+        THIS API IS UNSTABLE AND DO NOT USE IT FOR PUBLIC LEVELS.
+        
         "set_key_value": {
           "prefix": "set_key_value()",
           "body": "pewpew.set_key_value(${1:player_index}, ${2:key}, ${3:value})",
@@ -108,6 +112,7 @@
           "body": "pewpew.get_key_value(${1:player_index}, ${2:key})",
           "description": "** UNSTABLE API ** ** DO NOT USE THIS IN PUBLIC LEVELS ** Gets value from the given key."
         },
+        */
         "get_entities_colliding_with_disk":{
           "prefix": "get_entities_colliding_with_disk()",
           "body": "pewpew.get_entities_colliding_with_disk(${1:center_x}, ${2:center_y}, ${3:radius})",
@@ -562,3 +567,4 @@
           "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
         }
       }
+ 
