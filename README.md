@@ -1,14 +1,15 @@
 # PewPew Snippets
-A Visual Studio Code extension that has useful snippets to enhance level creation for PewPew Live.
+A Visual Studio Code extension that has useful snippets for PewPew Live custom level making.
+
 ## Usage:
 Download this extension:
-* VSIX extension: [Github Releases](https://github.com/Tasty-Kiwi/Pewhelp-vscode/releases)
-* VSCode marketplace: Not available
+* `.vsix` extension: [GitHub Releases](https://github.com/Tasty-Kiwi/Pewhelp-vscode/releases)
+* Visual Studio Code marketplace: Not available
 
 ## Building it
 You need to have node.js and vsce ( `npm install -g vsce` ).
 
-Then just do `vsce package` to package it to get VSIX extension.
+Then just do `vsce package` to build an extension.
 
 ## Contributing:
 Feel free to do it! Useful resources for making them: 
