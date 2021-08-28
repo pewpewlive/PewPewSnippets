@@ -135,6 +135,16 @@
     "body": "pewpew.new_baf(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
     "description": "Creates a new BAF at the specified location, and returns its entityId."
   },
+  "new_baf_red":{
+    "prefix": "new_baf_red()",
+    "body": "pewpew.new_baf_red(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
+    "description": "Creates a new red BAF at the specified location, and returns its entityId."
+  },
+  "new_baf_blue":{
+    "prefix": "new_baf_blue()",
+    "body": "pewpew.new_baf_blue(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
+    "description": "Creates a new blue BAF at the specified location, and returns its entityId."
+  },
   "new_bomb":{
     "prefix": "new_bomb()",
     "body": "pewpew.new_bomb(${1:x}, ${2:y}, $0)",

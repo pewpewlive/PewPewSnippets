@@ -3,7 +3,7 @@
     "displayName": "PewPew Snippets",
     "description": "A Visual Studio Code extension that has useful snippets to enhance level creation for PewPew Live.",
     "publisher": "Tasty-Kiwi",
-    "version": "1.0.3",
+    "version": "1.0.5",
     "badges": [{
         "url": "https://img.shields.io/badge/Come%20to%20see%20our-GitHub%20repository-success?style=for-the-badge&logo=github",
         "href": "https://github.com/Tasty-Kiwi/PewPewSnippets",
