@@ -110,6 +110,11 @@
     "body": "pewpew.get_entity_count($0)",
     "description": "Returns the number of entities of specified type that are alive."
   },
+  "get_entity_type":{
+    "prefix": "get_entity_type()",
+    "body": "pewpew.get_entity_type($0)",
+    "description": "Returns the type of the given entity."
+  },
   "play_ambient_sound":{
     "prefix": "play_ambient_sound()",
     "body": "pewpew.play_ambient_sound(${1:sound_path}, ${2:index})",
