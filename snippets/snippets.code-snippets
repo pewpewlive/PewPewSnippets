@@ -1,566 +1,581 @@
 /**
-  * PewPew snippets. Copyright (c) 2021 Tasty Kiwi (Dominykas M.). 
-  * This project is licensed under MIT license.
-  */
+ * PewPew snippets. Copyright (c) 2022 Tasty Kiwi (Dominykas M.).
+ * This project is licensed under MIT license.
+ */
 
 {
   /*  pewpew Library snippets  */
   "print": {
-    "prefix": "print()",
+    "prefix": "pewpew.print",
     "body": "pewpew.print(${1:str})",
     "description": "Prints to the console."
   },
   "print_debug_info": {
-    "prefix": "print_debug_info()",
+    "prefix": "pewpew.print_debug_info",
     "body": "pewpew.print_debug_info()",
     "description": "Prints the number of entities created and the amount of memory used by the script."
   },
   "set_level_size": {
-    "prefix": "set_level_size()",
+    "prefix": "pewpew.set_level_size",
     "body": "pewpew.set_level_size(${1:width}, ${2:height})",
     "description": "Sets the level's size."
   },
   "add_wall": {
-    "prefix": "add_wall()",
+    "prefix": "pewpew.add_wall",
     "body": "pewpew.add_wall(${1:start_x}, ${2:start_y}, ${3:end_x}, ${4:end_y})",
     "description": "Adds a wall to the level from (start_x,start_y) to (end_x,end_y), and returns its wall ID. Note: A maximum of 200 walls can be created."
   },
   "remove_wall": {
-    "prefix": "remove_wall()",
+    "prefix": "pewpew.remove_wall",
     "body": "pewpew.remove_wall(${1:wall_id})",
     "description": "Remove the wall with the given wall_id."
   },
   "add_update_callback": {
-    "prefix": "add_update_callback()",
+    "prefix": "pewpew.add_update_callback",
     "body": "pewpew.add_update_callback(${1:callback_function})",
     "description": "Adds a callback that will be updated at each game tick."
   },
   "get_number_of_players": {
-    "prefix": "get_number_of_players()",
-    "body": "pewpew.get_number_of_players()",
+    "prefix": "pewpew.get_number_of_players",
+    "body": "pewpew.get_number_of_players",
     "description": "Returns the number of players in the game."
   },
   "increase_score_of_player": {
-    "prefix": "increase_score_of_player()",
+    "prefix": "pewpew.increase_score_of_player",
     "body": "pewpew.increase_score_of_player(${1:player_index}, ${2:delta})",
     "description": "Increases the score of the player at the specified player_index by an amount of delta. Note that delta can be negative."
   },
   "stop_game": {
-    "prefix": "stop_game()",
+    "prefix": "pewpew.stop_game",
     "body": "pewpew.stop_game()",
     "description": "Ends the current game."
   },
   "get_player_inputs": {
-    "prefix": "get_player_inputs()",
+    "prefix": "pewpew.get_player_inputs",
     "body": "local ${1:move_angle}, ${2:move_distance}, ${3:shoot_angle}, ${4:shoot_distance} = pewpew.get_player_inputs(${5:player_index})",
     "description": "Returns the inputs of the player at the specified index."
   },
   "get_score_of_player": {
-    "prefix": "get_score_of_player()",
+    "prefix": "pewpew.get_score_of_player",
     "body": "pewpew.get_score_of_player(${1:player_index})",
     "description": "Returns the score of the player at the specified player_index."
   },
   "configure_player": {
-    "prefix": "configure_player()",
-    "body": "pewpew.configure_player(${1:player_index}, ${2:{}})",
+    "prefix": "pewpew.configure_player",
+    "body": "pewpew.configure_player(${1:player_index}, {$2})",
     "description": "Configures the player at the specified player_index."
   },
+  "configure_player_hud": {
+    "prefix": "pewpew.configure_player_hud",
+    "body": "pewpew.configure_player_hud((${1:player_index}, {$2})",
+    "description": "Configures the player's HUD. player_index must in the range [0, get_number_of_players() - 1]."
+  },
   "get_player_configuration": {
-    "prefix": "get_player_configuration()",
+    "prefix": "pewpew.get_player_configuration",
     "body": "pewpew.get_player_configuration(${1:player_index})",
     "description": "Returns a map containing the configuration of the player at the specified player_index."
   },
   "configure_player_ship_weapon": {
-    "prefix": "configure_player_ship_weapon()",
-    "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, ${2:{}})",
+    "prefix": "pewpew.configure_player_ship_weapon",
+    "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, {$2})",
     "description": "Configures the weapon of the ship identified with ship_id using configuration."
   },
   "add_damage_to_player_ship": {
-    "prefix": "add_damage_to_player_ship()",
+    "prefix": "pewpew.add_damage_to_player_ship",
     "body": "pewpew.add_damage_to_player_ship(${1:ship_id}, ${2:damage})",
     "description": "Reduces the amount of shield of the player that owns the ship by damage points."
   },
   "add_arrow_to_player_ship": {
-    "prefix": "add_arrow_to_player_ship()",
+    "prefix": "pewpew.add_arrow_to_player_ship",
     "body": "pewpew.add_arrow_to_player_ship(${1:ship_id}, ${2:target_id}, ${3:color})",
     "description": "Adds an arrow to the ship identified with ship_id pointing towards the entity identified with target_id, and returns the ID of the arrow."
   },
   "remove_arrow_from_player_ship": {
-    "prefix": "remove_arrow_from_player_ship()",
+    "prefix": "pewpew.remove_arrow_from_player_ship",
     "body": "pewpew.remove_arrow_from_player_ship(${1:ship_id}, ${2:arrow_id})",
     "description": "Removes the arrow identified by arrow_id from the ship identified by ship_id."
   },
   "make_player_ship_transparent": {
-    "prefix": "make_player_ship_transparent()",
+    "prefix": "pewpew.make_player_ship_transparent",
     "body": "pewpew.make_player_ship_transparent(${1:ship_id}, ${2:transparency_duration})",
     "description": "Makes the player ship transparent for transparency_duration game ticks."
   },
   "set_player_ship_speed": {
-    "prefix": "set_player_ship_speed()",
+    "prefix": "pewpew.set_player_ship_speed",
     "body": "pewpew.set_player_ship_speed(${1:ship_id}, ${2:factor}, ${3:offset}, ${4:duration})",
     "description": "Sets and returns the effective speed of the specified player ship as a function of the base speed of the ship."
   },
-  "get_entities_colliding_with_disk":{
-    "prefix": "get_entities_colliding_with_disk()",
+  "get_entities_colliding_with_disk": {
+    "prefix": "pewpew.get_entities_colliding_with_disk",
     "body": "pewpew.get_entities_colliding_with_disk(${1:center_x}, ${2:center_y}, ${3:radius})",
     "description": "Returns the list of collidable entities (which includes all enemies) that overlap with the given disk."
   },
-  "get_entity_count":{
-    "prefix": "get_entity_count()",
+  "get_entity_count": {
+    "prefix": "pewpew.get_entity_count",
     "body": "pewpew.get_entity_count($0)",
     "description": "Returns the number of entities of specified type that are alive."
   },
-  "get_entity_type":{
-    "prefix": "get_entity_type()",
+  "get_entity_type": {
+    "prefix": "pewpew.get_entity_type",
     "body": "pewpew.get_entity_type($0)",
     "description": "Returns the type of the given entity."
   },
-  "play_ambient_sound":{
-    "prefix": "play_ambient_sound()",
+  "play_ambient_sound": {
+    "prefix": "pewpew.play_ambient_sound",
     "body": "pewpew.play_ambient_sound(${1:sound_path}, ${2:index})",
     "description": "Plays the sound described at sound_path at the specified index."
   },
-  "play_sound":{
-    "prefix": "play_sound()",
+  "play_sound": {
+    "prefix": "pewpew.play_sound",
     "body": "pewpew.play_sound(${1:sound_path}, ${2:index}, ${3:x}, ${4:y})",
     "description": "Plays the sound described at sound_path at the specified in-game location."
   },
-  "create_explosion":{
-    "prefix": "create_explosion()",
+  "create_explosion": {
+    "prefix": "pewpew.create_explosion",
     "body": "pewpew.create_explosion(${1:x}, ${2:y}, ${3:color}, ${4:scale}, ${5:particle_count})",
-    "description": "Creates an explosion of particles at the specified location. Scale is within the range [0, 10] and particle_count is in the range [1, 100].",
+    "description": "Creates an explosion of particles at the specified location. Scale is within the range [0, 10] and particle_count is in the range [1, 100]."
   },
-  "new_asteroid":{
-    "prefix": "new_asteroid()",
+  "new_asteroid": {
+    "prefix": "pewpew.new_asteroid",
     "body": "pewpew.new_asteroid(${1:x}, ${2:y})",
-    "description": "Creates a new Asteroid at the specified location and returns its entityId.",
+    "description": "Creates a new Asteroid at the specified location and returns its entityId."
   },
-  "new_baf":{
-    "prefix": "new_baf()",
+  "new_baf": {
+    "prefix": "pewpew.new_baf",
     "body": "pewpew.new_baf(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
     "description": "Creates a new BAF at the specified location, and returns its entityId."
   },
-  "new_baf_red":{
-    "prefix": "new_baf_red()",
+  "new_baf_red": {
+    "prefix": "pewpew.new_baf_red",
     "body": "pewpew.new_baf_red(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
     "description": "Creates a new red BAF at the specified location, and returns its entityId."
   },
-  "new_baf_blue":{
-    "prefix": "new_baf_blue()",
+  "new_baf_blue": {
+    "prefix": "pewpew.new_baf_blue",
     "body": "pewpew.new_baf_blue(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
     "description": "Creates a new blue BAF at the specified location, and returns its entityId."
   },
-  "new_bomb":{
-    "prefix": "new_bomb()",
+  "new_bomb": {
+    "prefix": "pewpew.new_bomb",
     "body": "pewpew.new_bomb(${1:x}, ${2:y}, $0)",
     "description": "Creates a new Bomb at the specified location, and returns its entityId."
   },
-  "new_customizable_entity":{
-    "prefix": "new_customizable_entity()",
+  "new_customizable_entity": {
+    "prefix": "pewpew.new_customizable_entity",
     "body": "pewpew.new_customizable_entity(${1:x}, ${2:y})",
     "description": "Creates a new customizable entity at the specified location, and returns its entityId."
   },
-  "new_inertiac":{
-    "prefix": "new_inertiac()",
+  "new_inertiac": {
+    "prefix": "pewpew.new_inertiac",
     "body": "pewpew.new_inertiac(${1:x}, ${2:y}, ${3:acceleration}, ${4:angle})",
     "description": "Creates a new Inertiac at the specified location, and returns its entityId."
   },
-  "new_mothership":{
-    "prefix": "new_mothership()",
+  "new_mothership": {
+    "prefix": "pewpew.new_mothership",
     "body": "pewpew.new_mothership(${1:x}, ${2:y}, $0, ${4:angle})",
     "description": "Creates a new Mothership at the specified location, and returns its entityId."
   },
-  "new_player_ship":{
-    "prefix": "new_player_ship()",
+  "new_player_ship": {
+    "prefix": "pewpew.new_player_ship",
     "body": "pewpew.new_player_ship(${1:x}, ${2:y}, ${3:player_index})",
     "description": "Creates a new Player Ship at the specified location for the player identified by player_index, and returns its entityId."
   },
-  "new_rolling_cube":{
-    "prefix": "new_rolling_cube()",
+  "new_rolling_cube": {
+    "prefix": "pewpew.new_rolling_cube",
     "body": "pewpew.new_rolling_cube(${1:x}, ${2:y})",
     "description": "Creates a new Rolling Cube at the specified location, and returns its entityId."
   },
-  "new_rolling_sphere":{
-    "prefix": "new_rolling_sphere()",
+  "new_rolling_sphere": {
+    "prefix": "pewpew.new_rolling_sphere",
     "body": "pewpew.new_rolling_sphere(${1:x}, ${2:y}, ${3:angle}, ${4:speed})",
     "description": "Creates a new Rolling Sphere at the specified location, and returns its entityId."
   },
-  "new_wary":{
-    "prefix": "new_wary()",
+  "new_wary": {
+    "prefix": "pewpew.new_wary",
     "body": "pewpew.new_wary(${1:x}, ${2:y})",
     "description": "Creates a new Wary at the specified location, and returns its entityId."
   },
-  "new_ufo":{
-    "prefix": "new_ufo()",
+  "new_ufo": {
+    "prefix": "pewpew.new_ufo",
     "body": "pewpew.new_ufo(${1:x}, ${2:y}, ${3:dx})",
     "description": "Creates a new UFO at the specified location, moving horizontally at the speed of dx, and returns its entityId."
   },
-  "new_crowder":{
-    "prefix": "new_crowder()",
+  "new_crowder": {
+    "prefix": "pewpew.new_crowder",
     "body": "pewpew.new_crowder(${1:x}, ${2:y})",
     "description": "Creates a new Crowder at the specified location, and returns its entityId."
   },
-  "new_player_bullet":{
-    "prefix": "new_player_bullet()",
+  "new_player_bullet": {
+    "prefix": "pewpew.new_player_bullet",
     "body": "pewpew.new_player_bullet(${1:x}, ${2:y}, ${3:angle}, ${4:player_index})",
     "description": "Creates a new player bullet at the specified location and angle, and returns its entityId."
   },
-  "rolling_cube_set_enable_collisions_with_walls":{
-    "prefix": "rolling_cube_set_enable_collisions_with_walls()",
+  "rolling_cube_set_enable_collisions_with_walls": {
+    "prefix": "pewpew.rolling_cube_set_enable_collisions_with_walls",
     "body": "pewpew.rolling_cube_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls})",
     "description": "Sets whether the Rolling Cube identified with id collides with walls. By default it does not."
   },
-  "ufo_set_enable_collisions_with_walls":{
-    "prefix": "ufo_set_enable_collisions_with_walls()",
+  "ufo_set_enable_collisions_with_walls": {
+    "prefix": "pewpew.ufo_set_enable_collisions_with_walls",
     "body": "pewpew.ufo_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls})",
     "description": "Sets whether the UFO identified with id collides with walls. By default it does not."
   },
-  "entity_get_position":{
-    "prefix": "entity_get_position()",
+  "entity_get_position": {
+    "prefix": "pewpew.entity_get_position",
     "body": "pewpew.entity_get_position(${1:entity_id})",
     "description": "Returns the position of the entity identified by id."
   },
-  "entity_get_is_alive":{
-    "prefix": "entity_get_is_alive()",
+  "entity_get_is_alive": {
+    "prefix": "pewpew.entity_get_is_alive",
     "body": "pewpew.entity_get_is_alive(${1:entity_id})",
     "description": "Returns whether the entity identified by id is alive or not."
   },
-  "entity_get_is_started_to_be_destroyed":{
-    "prefix": "entity_get_is_started_to_be_destroyed()",
+  "entity_get_is_started_to_be_destroyed": {
+    "prefix": "pewpew.entity_get_is_started_to_be_destroyed",
     "body": "pewpew.entity_get_is_started_to_be_destroyed(${1:entity_id})",
     "description": "Returns whether the entity identified by id is in the process of being destroyed. Returns false if the entity does not exist."
   },
-  "entity_set_position":{
-    "prefix": "entity_set_position()",
+  "entity_set_position": {
+    "prefix": "pewpew.entity_set_position",
     "body": "pewpew.entity_set_position(${1:entity_id}, ${2:x}, ${3:y})",
     "description": "Sets the position of the entity identified by id to specified position."
   },
-  "entity_set_radius":{
-    "prefix": "entity_set_radius()",
+  "entity_set_radius": {
+    "prefix": "pewpew.entity_set_radius",
     "body": "pewpew.entity_set_radius(${1:entity_id}, ${2:radius})",
     "description": "Sets the radius of the entity identified by id. To give you a sense of scale, motherships have a radius of 28fx."
   },
-  "entity_set_update_callback":{
-    "prefix": "entity_set_update_callback()",
+  "entity_set_update_callback": {
+    "prefix": "pewpew.entity_set_update_callback",
     "body": "pewpew.entity_set_update_callback(${1:entity_id}, ${2:callback_function})",
     "description": "Sets a callback that will be called at every tick as long as the entity identified by id is alive. The callbacks gets called with the entityId."
   },
-  "entity_destroy":{
-    "prefix": "entity_destroy()",
+  "entity_destroy": {
+    "prefix": "pewpew.entity_destroy",
     "body": "pewpew.entity_destroy(${1:entity_id})",
     "description": "Makes the entity identified by id immediately disappear forever."
   },
-  "entity_react_to_weapon":{
-    "prefix": "entity_react_to_weapon()",
-    "body": "pewpew.entity_react_to_weapon(${1:entity_id}, {2:{}})",
+  "entity_react_to_weapon": {
+    "prefix": "pewpew.entity_react_to_weapon",
+    "body": "pewpew.entity_react_to_weapon(${1:entity_id}, {$2})",
     "description": "Makes the entity identified by id react to the weapon described in weapon_description. "
   },
-  "customizable_entity_set_position_interpolation":{
-    "prefix": "customizable_entity_set_position_interpolation()",
+  "customizable_entity_set_position_interpolation": {
+    "prefix": "pewpew.customizable_entity_set_position_interpolation",
     "body": "pewpew.customizable_entity_set_position_interpolation(${1:entity_id}, ${2:enabled})",
     "description": "Sets whether the position of the mesh will be interpolated when rendering."
   },
-  "customizable_entity_set_mesh":{
-    "prefix": "customizable_entity_set_mesh()",
+  "customizable_entity_set_mesh": {
+    "prefix": "pewpew.customizable_entity_set_mesh",
     "body": "pewpew.customizable_entity_set_mesh(${1:entity_id}, ${2:file_path}, ${3:index})",
     "description": "Sets the mesh of the customizable entity identified by id to the mesh described in the file file_path at the specified index."
   },
-  "customizable_entity_set_flipping_meshes":{
-    "prefix": "customizable_entity_set_flipping_meshes()",
+  "customizable_entity_set_flipping_meshes": {
+    "prefix": "pewpew.customizable_entity_set_flipping_meshes",
     "body": "pewpew.customizable_entity_set_flipping_meshes(${1:entity_id}, ${2:file_path}, ${3:index_0}, ${4:index_1})",
     "description": "Similar to customizable_entity_set_mesh, but sets two meshes that will be used in alternation. By specifying 2 separate meshes, 60 fps animations can be achieved."
   },
-  "customizable_entity_set_mesh_color":{
-    "prefix": "customizable_entity_set_mesh_color()",
+  "customizable_entity_set_mesh_color": {
+    "prefix": "pewpew.customizable_entity_set_mesh_color",
     "body": "pewpew.customizable_entity_set_mesh_color(${1:entity_id}, ${2:color})",
     "description": "Sets the color multiplier for the mesh of the customizable entity identified by id."
   },
-  "customizable_entity_set_string":{
-    "prefix": "customizable_entity_set_string()",
+  "customizable_entity_set_string": {
+    "prefix": "pewpew.customizable_entity_set_string",
     "body": "pewpew.customizable_entity_set_string(${1:entity_id}, ${2:text})",
     "description": "Sets the string to be displayed as part of the mesh of the customizable entity identified by id."
   },
-  "customizable_entity_set_mesh_z":{
-    "prefix": "customizable_entity_set_mesh_z()",
+  "customizable_entity_set_mesh_xyz": {
+    "prefix": "pewpew.customizable_entity_set_mesh_xyz",
+    "body": "pewpew.customizable_entity_set_mesh_xyz(${1:entity_id}, ${2:x}, ${3:y}, ${4:z})",
+    "description": "Sets the position of the mesh to x,y,z, relative to the center of the customizable entity identified by id."
+  },
+  "customizable_entity_set_mesh_z": {
+    "prefix": "pewpew.customizable_entity_set_mesh_z",
     "body": "pewpew.customizable_entity_set_mesh_z(${1:entity_id}, ${2:z})",
     "description": "Sets the height of the mesh of the customizable entity identified by id."
   },
-  "customizable_entity_set_mesh_scale":{
-    "prefix": "customizable_entity_set_mesh_scale()",
+  "customizable_entity_set_mesh_scale": {
+    "prefix": "pewpew.customizable_entity_set_mesh_scale",
     "body": "pewpew.customizable_entity_set_mesh_scale(${1:entity_id}, ${2:scale})",
     "description": "Sets the scale of the mesh of the customizable entity identified by id."
   },
-  "customizable_entity_set_mesh_xyz_scale":{
-    "prefix": "customizable_entity_set_mesh_xyz_scale()",
+  "customizable_entity_set_mesh_xyz_scale": {
+    "prefix": "pewpew.customizable_entity_set_mesh_xyz_scale",
     "body": "pewpew.customizable_entity_set_mesh_xyz_scale(${1:entity_id}, ${2:x_scale}, ${3:y_scale}, ${4:z_scale})",
     "description": "Sets the scale of the mesh of the customizable entity identified by id along the x,y,z axis."
   },
-  "customizable_entity_set_mesh_angle":{
-    "prefix": "customizable_entity_set_mesh_angle()",
+  "customizable_entity_set_mesh_angle": {
+    "prefix": "pewpew.customizable_entity_set_mesh_angle",
     "body": "pewpew.customizable_entity_set_mesh_angle(${1:entity_id}, ${2:angle}, ${3:x_axis}, ${4:y_axis}, ${5:z_axis})",
     "description": "Sets the rotation angle of the mesh of the customizable entity identified by id. The rotation is applied along the axis defined by x_axis,y_axis,z_axis."
   },
-  "customizable_entity_configure_music_response":{
-    "prefix": "customizable_entity_configure_music_response()",
-    "body": "pewpew.customizable_entity_configure_music_response(${1:entity_id}, ${2:{}})",
+  "customizable_entity_skip_mesh_attributes_interpolation": {
+    "prefix": "pewpew.customizable_entity_skip_mesh_attributes_interpolation",
+    "body": "pewpew.customizable_entity_skip_mesh_attributes_interpolation(${1:entity_id})",
+    "description": "Skips the interpolation of the mesh's attributes (x, y, z, scale_x, scale_y, scale_z, rotation)."
+  },
+  "customizable_entity_configure_music_response": {
+    "prefix": "pewpew.customizable_entity_configure_music_response",
+    "body": "pewpew.customizable_entity_configure_music_response(${1:entity_id}, {$2})",
     "description": "Configures the way the entity is going to respond to the music."
   },
-  "customizable_entity_add_rotation_to_mesh":{
-    "prefix": "customizable_entity_add_rotation_to_mesh()",
+  "customizable_entity_add_rotation_to_mesh": {
+    "prefix": "pewpew.customizable_entity_add_rotation_to_mesh",
     "body": "pewpew.customizable_entity_add_rotation_to_mesh(${1:entity_id}, ${2:angle}, ${3:x_axis}, ${4:y_axis}, ${5:z_axis})",
     "description": "Adds a rotation to the mesh of the customizable entity identified by id. The rotation is applied along the axis defined by x_axis,y_axis,z_axis."
   },
-  "customizable_entity_set_visibility_radius":{
-    "prefix": "customizable_entity_set_visibility_radius()",
+  "customizable_entity_set_visibility_radius": {
+    "prefix": "pewpew.customizable_entity_set_visibility_radius",
     "body": "pewpew.customizable_entity_set_visibility_radius(${1:entity_id}, ${2:radius})",
     "description": "Sets the radius defining the visibility of the entity. This allows the game to know when an entity is actually visible, which in turns allows to massively optimize the rendering."
   },
-  "customizable_entity_configure_wall_collision":{
-    "prefix": "customizable_entity_configure_wall_collision()",
+  "customizable_entity_configure_wall_collision": {
+    "prefix": "pewpew.customizable_entity_configure_wall_collision",
     "body": "pewpew.customizable_entity_configure_wall_collision(${1:entity_id}, ${3:collide_with_walls}, ${4:callback_function})",
     "description": "Sets the callback for when the customizable entity identified by id collides with a wall. collide_with_walls configures whether the entity should stop when colliding with walls."
   },
-  "customizable_entity_set_player_collision_callback":{
-    "prefix": "customizable_entity_set_player_collision_callback()",
+  "customizable_entity_set_player_collision_callback": {
+    "prefix": "pewpew.customizable_entity_set_player_collision_callback",
     "body": "pewpew.customizable_entity_set_player_collision_callback(${1:entity_id}, ${2:callback_function})",
     "description": "Sets the callback for when the customizable entity identified by id collides with a player's ship."
   },
-  "customizable_entity_set_weapon_collision_callback":{
-    "prefix": "customizable_entity_set_weapon_collision_callback()",
+  "customizable_entity_set_weapon_collision_callback": {
+    "prefix": "pewpew.customizable_entity_set_weapon_collision_callback",
     "body": "pewpew.customizable_entity_set_weapon_collision_callback(${1:entity_id}, ${2:callback_function})",
     "description": "Sets the callback for when the customizable entity identified by id collides with a player's weapon."
   },
-  "customizable_entity_start_spawning":{
-    "prefix": "customizable_entity_start_spawning()",
+  "customizable_entity_start_spawning": {
+    "prefix": "pewpew.customizable_entity_start_spawning",
     "body": "pewpew.customizable_entity_start_spawning(${1:entity_id}, ${2:spawning_duration})",
     "description": "Makes the customizable entity identified by id spawn for a specified duration in game ticks."
   },
-  "customizable_entity_start_exploding":{
-    "prefix": "customizable_entity_start_exploding()",
+  "customizable_entity_start_exploding": {
+    "prefix": "pewpew.customizable_entity_start_exploding",
     "body": "pewpew.customizable_entity_start_exploding(${1:entity_id}, ${2:explosion_duration})",
     "description": "Makes the customizable entity identified by id explode for a specified duration in game ticks."
   },
   /*  fmath library snippets  */
-  "max_fixedpoint":{
-    "prefix": "max_fixedpoint()",
-    "body": "fmath.max_fixedpoint()",
+  "max_fixedpoint": {
+    "prefix": "fmath.max_fixedpoint",
+    "body": "fmath.max_fixedpoint",
     "description": "Returns the maximum value a fixedpoint integer can take."
   },
-  "random_fixedpoint":{
-    "prefix": "random_fixedpoint()",
+  "random_fixedpoint": {
+    "prefix": "fmath.random_fixedpoint",
     "body": "fmath.random_fixedpoint(${1:min}, ${2:max})",
     "description": "Returns an integer in the range [min, max]. max must be greater or equal to min."
   },
-  "random_int":{
-    "prefix": "random_int()",
+  "random_int": {
+    "prefix": "fmath.random_int",
     "body": "fmath.random_int(${1:min}, ${2:max})",
     "description": "Returns an integer in the range [min, max]. max must be greater or equal to min."
   },
-  "sqrt":{
-    "prefix": "sqrt()",
+  "sqrt": {
+    "prefix": "fmath.sqrt",
     "body": "fmath.sqrt(${1:x})",
     "description": "Returns the square root of x. x must be greater or equal to 0."
   },
-  "from_fraction":{
-    "prefix": "from_fraction()",
+  "from_fraction": {
+    "prefix": "fmath.from_fraction",
     "body": "fmath.from_fraction(${1:numerator}, ${2:denominator})",
     "description": "Returns the fixedpoint value representing the fraction numerator/denominator. denominator must not be equal to 0."
   },
-  "to_int":{
-    "prefix": "to_int()",
+  "to_int": {
+    "prefix": "fmath.to_int",
     "body": "fmath.to_int(${1:min}, ${2:max})",
     "description": "Returns the integral part of the specified value."
   },
-  "abs_fixedpoint":{
-    "prefix": "abs_fixedpoint()",
+  "abs_fixedpoint": {
+    "prefix": "fmath.abs_fixedpoint",
     "body": "fmath.abs_fixedpoint(${1:value})",
     "description": "Returns the absolute value."
   },
-  "to_fixedpoint":{
-    "prefix": "to_fixedpoint()",
+  "to_fixedpoint": {
+    "prefix": "fmath.to_fixedpoint",
     "body": "fmath.to_fixedpoint(${1:value})",
     "description": "Returns a fixedpoint value with the integral part of the specified value, and no fractional part."
   },
-  "sincos":{
-    "prefix": "sincos()",
+  "sincos": {
+    "prefix": "fmath.sincos",
     "body": "fmath.sincos(${1:angle})",
     "description": "Returns the sinus and cosinus of the specified angle. The angle is in radian."
   },
-  "atan2":{
-    "prefix": "atan2()",
+  "atan2": {
+    "prefix": "fmath.atan2",
     "body": "fmath.atan2(${1:y}, ${2:x})",
     "description": "Returns the principal value of the arc tangent of y/x. Returns a value in the range [0, 2π[."
   },
-  "tau":{
-    "prefix": "tau()",
-    "body": "fmath.tau()",
+  "tau": {
+    "prefix": "fmath.tau",
+    "body": "fmath.tau",
     "description": "Returns τ (aka 2π)."
   },
   /* pewpew Library Enum snippets */
-  "EntityType_ASTEROID":{
-    "prefix": "EntityType.ASTEROID",
+  "EntityType_ASTEROID": {
+    "prefix": "pewpew.EntityType.ASTEROID",
     "body": "pewpew.EntityType.ASTEROID",
     "description": "Asteroid Entity Type"
   },
-  "EntityType_BAF":{
-    "prefix": "EntityType.BAF",
+  "EntityType_BAF": {
+    "prefix": "pewpew.EntityType.BAF",
     "body": "pewpew.EntityType.BAF",
     "description": "Baf Entity Type"
   },
-  "EntityType_CROWDER":{
-    "prefix": "EntityType.CROWDER",
+  "EntityType_CROWDER": {
+    "prefix": "pewpew.EntityType.CROWDER",
     "body": "pewpew.EntityType.CROWDER",
     "description": "Crowder Entity Type"
   },
-  "EntityType_INERTIAC":{
-    "prefix": "EntityType.INERTIAC",
+  "EntityType_INERTIAC": {
+    "prefix": "pewpew.EntityType.INERTIAC",
     "body": "pewpew.EntityType.INERTIAC",
     "description": "Inertiac Entity Type"
   },
-  "EntityType_MOTHERSHIP":{
-    "prefix": "EntityType.MOTHERSHIP",
+  "EntityType_MOTHERSHIP": {
+    "prefix": "pewpew.EntityType.MOTHERSHIP",
     "body": "pewpew.EntityType.MOTHERSHIP",
     "description": "Mothership Entity Type"
   },
-  "EntityType_MOTHERSHIP_BULLET":{
-    "prefix": "EntityType.MOTHERSHIP_BULLET",
+  "EntityType_MOTHERSHIP_BULLET": {
+    "prefix": "pewpew.EntityType.MOTHERSHIP_BULLET",
     "body": "pewpew.EntityType.MOTHERSHIP_BULLET",
     "description": "Mothership Bullet Entity Type"
   },
-  "EntityType_ROLLING_CUBE":{
-    "prefix": "EntityType.ROLLING_CUBE",
+  "EntityType_ROLLING_CUBE": {
+    "prefix": "pewpew.EntityType.ROLLING_CUBE",
     "body": "pewpew.EntityType.ROLLING_CUBE",
     "description": "Rolling Cube Entity Type"
   },
-  "EntityType_ROLLING_SPHERE":{
-    "prefix": "EntityType.ROLLING_SPHERE",
+  "EntityType_ROLLING_SPHERE": {
+    "prefix": "pewpew.EntityType.ROLLING_SPHERE",
     "body": "pewpew.EntityType.ROLLING_SPHERE",
     "description": "Rolling Sphere Entity Type"
   },
-  "EntityType_UFO":{
-    "prefix": "EntityType.UFO",
+  "EntityType_UFO": {
+    "prefix": "pewpew.EntityType.UFO",
     "body": "pewpew.EntityType.UFO",
     "description": "UFO Entity Type"
   },
-  "EntityType_WARY":{
-    "prefix": "EntityType.WARY",
+  "EntityType_WARY": {
+    "prefix": "pewpew.EntityType.WARY",
     "body": "pewpew.EntityType.WARY",
     "description": "Wary Entity Type"
   },
-  "MothershipType_THREE_CORNERS":{
-    "prefix": "MothershipType.THREE_CORNERS",
+  "MothershipType_THREE_CORNERS": {
+    "prefix": "pewpew.MothershipType.THREE_CORNERS",
     "body": "pewpew.MothershipType.THREE_CORNERS"
   },
-  "MothershipType_FOUR_CORNERS":{
-    "prefix": "MothershipType.FOUR_CORNERS",
+  "MothershipType_FOUR_CORNERS": {
+    "prefix": "pewpew.MothershipType.FOUR_CORNERS",
     "body": "pewpew.MothershipType.FOUR_CORNERS"
   },
-  "MothershipType_FIVE_CORNERS":{
-    "prefix": "MothershipType.FIVE_CORNERS",
+  "MothershipType_FIVE_CORNERS": {
+    "prefix": "pewpew.MothershipType.FIVE_CORNERS",
     "body": "pewpew.MothershipType.FIVE_CORNERS"
   },
-  "MothershipType_SIX_CORNERS":{
-    "prefix": "MothershipType.SIX_CORNERS",
+  "MothershipType_SIX_CORNERS": {
+    "prefix": "pewpew.MothershipType.SIX_CORNERS",
     "body": "pewpew.MothershipType.SIX_CORNERS"
   },
-  "MothershipType_SEVEN_CORNERS":{
-    "prefix": "MothershipType.SEVEN_CORNERS",
+  "MothershipType_SEVEN_CORNERS": {
+    "prefix": "pewpew.MothershipType.SEVEN_CORNERS",
     "body": "pewpew.MothershipType.SEVEN_CORNERS"
   },
-  "CannonType_SINGLE":{
-    "prefix": "CannonType.SINGLE",
+  "CannonType_SINGLE": {
+    "prefix": "pewpew.CannonType.SINGLE",
     "body": "pewpew.CannonType.SINGLE"
   },
-  "CannonType_TIC_TOC":{
-    "prefix": "CannonType.TIC_TOC",
+  "CannonType_TIC_TOC": {
+    "prefix": "pewpew.CannonType.TIC_TOC",
     "body": "pewpew.CannonType.TIC_TOC"
   },
-  "CannonType_DOUBLE":{
-    "prefix": "CannonType.DOUBLE",
+  "CannonType_DOUBLE": {
+    "prefix": "pewpew.CannonType.DOUBLE",
     "body": "pewpew.CannonType.DOUBLE"
   },
-  "CannonType_TRIPLE":{
-    "prefix": "CannonType.TRIPLE",
+  "CannonType_TRIPLE": {
+    "prefix": "pewpew.CannonType.TRIPLE",
     "body": "pewpew.CannonType.TRIPLE"
   },
-  "CannonType_FOUR_DIRECTIONS":{
-    "prefix": "CannonType.FOUR_DIRECTIONS",
+  "CannonType_FOUR_DIRECTIONS": {
+    "prefix": "pewpew.CannonType.FOUR_DIRECTIONS",
     "body": "pewpew.CannonType.FOUR_DIRECTIONS"
   },
-  "CannonType_DOUBLE_SWIPE":{
-    "prefix": "CannonType.DOUBLE_SWIPE",
+  "CannonType_DOUBLE_SWIPE": {
+    "prefix": "pewpew.CannonType.DOUBLE_SWIPE",
     "body": "pewpew.CannonType.DOUBLE_SWIPE"
   },
-  "CannonType_HEMISPHERE":{
-    "prefix": "CannonType.HEMISPHERE",
+  "CannonType_HEMISPHERE": {
+    "prefix": "pewpew.CannonType.HEMISPHERE",
     "body": "pewpew.CannonType.HEMISPHERE"
   },
-  "CannonFrequency_FREQ_1":{
-    "prefix": "CannonFrequency.FREQ_1",
+  "CannonFrequency_FREQ_1": {
+    "prefix": "pewpew.CannonFrequency.FREQ_1",
     "body": "pewpew.CannonFrequency.FREQ_1"
   },
-  "CannonFrequency_FREQ_2":{
-    "prefix": "CannonFrequency.FREQ_2",
+  "CannonFrequency_FREQ_2": {
+    "prefix": "pewpew.CannonFrequency.FREQ_2",
     "body": "pewpew.CannonFrequency.FREQ_2"
   },
-  "CannonFrequency_FREQ_3":{
-    "prefix": "CannonFrequency.FREQ_3",
+  "CannonFrequency_FREQ_3": {
+    "prefix": "pewpew.CannonFrequency.FREQ_3",
     "body": "pewpew.CannonFrequency.FREQ_3"
   },
-  "CannonFrequency_FREQ_5":{
-    "prefix": "CannonFrequency.FREQ_5",
+  "CannonFrequency_FREQ_5": {
+    "prefix": "pewpew.CannonFrequency.FREQ_5",
     "body": "pewpew.CannonFrequency.FREQ_5"
   },
-  "CannonFrequency_FREQ_6":{
-    "prefix": "CannonFrequency.FREQ_6",
+  "CannonFrequency_FREQ_6": {
+    "prefix": "pewpew.CannonFrequency.FREQ_6",
     "body": "pewpew.CannonFrequency.FREQ_6"
   },
-  "CannonFrequency_FREQ_7_5":{
-    "prefix": "CannonFrequency.FREQ_7_5",
+  "CannonFrequency_FREQ_7_5": {
+    "prefix": "pewpew.CannonFrequency.FREQ_7_5",
     "body": "pewpew.CannonFrequency.FREQ_7_5"
   },
-  "CannonFrequency_FREQ_10":{
-    "prefix": "CannonFrequency.FREQ_10",
+  "CannonFrequency_FREQ_10": {
+    "prefix": "pewpew.CannonFrequency.FREQ_10",
     "body": "pewpew.CannonFrequency.FREQ_10"
   },
-  "CannonFrequency_FREQ_15":{
-    "prefix": "CannonFrequency.FREQ_15",
+  "CannonFrequency_FREQ_15": {
+    "prefix": "pewpew.CannonFrequency.FREQ_15",
     "body": "pewpew.CannonFrequency.FREQ_15"
   },
-  "CannonFrequency_FREQ_30":{
-    "prefix": "CannonFrequency.FREQ_30",
+  "CannonFrequency_FREQ_30": {
+    "prefix": "pewpew.CannonFrequency.FREQ_30",
     "body": "pewpew.CannonFrequency.FREQ_30"
   },
-  "BombType_FREEZE":{
-    "prefix": "BombType.FREEZE",
+  "BombType_FREEZE": {
+    "prefix": "pewpew.BombType.FREEZE",
     "body": "pewpew.BombType.FREEZE"
   },
-  "BombType_REPULSIVE":{
-    "prefix": "BombType.REPULSIVE",
+  "BombType_REPULSIVE": {
+    "prefix": "pewpew.BombType.REPULSIVE",
     "body": "pewpew.BombType.REPULSIVE"
   },
-  "BombType_ATOMIZE":{
-    "prefix": "BombType.ATOMIZE",
+  "BombType_ATOMIZE": {
+    "prefix": "pewpew.BombType.ATOMIZE",
     "body": "pewpew.BombType.ATOMIZE"
   },
-  "BombType_SMALL_ATOMIZE":{
-    "prefix": "BombType.SMALL_ATOMIZE",
+  "BombType_SMALL_ATOMIZE": {
+    "prefix": "pewpew.BombType.SMALL_ATOMIZE",
     "body": "pewpew.BombType.SMALL_ATOMIZE"
   },
-  "WeaponType_BULLET":{
-    "prefix": "WeaponType.BULLET",
+  "WeaponType_BULLET": {
+    "prefix": "pewpew.WeaponType.BULLET",
     "body": "pewpew.WeaponType.BULLET"
   },
-  "WeaponType_FREEZE_EXPLOSION":{
-    "prefix": "WeaponType.FREEZE_EXPLOSION",
+  "WeaponType_FREEZE_EXPLOSION": {
+    "prefix": "pewpew.WeaponType.FREEZE_EXPLOSION",
     "body": "pewpew.WeaponType.FREEZE_EXPLOSION"
   },
-  "WeaponType_REPULSIVE_EXPLOSION":{
-    "prefix": "WeaponType.REPULSIVE_EXPLOSION",
+  "WeaponType_REPULSIVE_EXPLOSION": {
+    "prefix": "pewpew.WeaponType.REPULSIVE_EXPLOSION",
     "body": "pewpew.WeaponType.REPULSIVE_EXPLOSION"
   },
-  "WeaponType_ATOMIZE_EXPLOSION":{
-    "prefix": "WeaponType.ATOMIZE_EXPLOSION",
+  "WeaponType_ATOMIZE_EXPLOSION": {
+    "prefix": "pewpew.WeaponType.ATOMIZE_EXPLOSION",
     "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
   }
 }
