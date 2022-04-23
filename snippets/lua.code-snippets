@@ -577,5 +577,78 @@
   "WeaponType_ATOMIZE_EXPLOSION": {
     "prefix": "pewpew.WeaponType.ATOMIZE_EXPLOSION",
     "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
+  },
+  /*  Special snippets  */
+  "meshes_table": {
+    "prefix": "!!meshes",
+    "body": ["meshes = {", "  $1", "}"],
+    "description": "A special snippet for mesh files."
+  },
+  "mesh": {
+    "prefix": "!!mesh",
+    "body": [
+      "{",
+      "  vertexes = {$1},",
+      "  colors = {$2},",
+      "  segments = {$3}",
+      "}$4"
+    ],
+    "description": "A special snippet for mesh table."
+  },
+  "sounds_table": {
+    "prefix": "!!sounds",
+    "body": ["sounds = {", "  $1", "}"],
+    "description": "A special snippet for sound files."
+  },
+  /*  Color snippets  */
+  "red": {
+    "prefix": "#red",
+    "body": "0xff0000ff",
+    "description": "Red color. rgba(255, 0, 0, 255)"
+  },
+  "green": {
+    "prefix": "#green",
+    "body": "0x00ff00ff",
+    "description": "Green color. rgba(0, 255, 0, 255)"
+  },
+  "blue": {
+    "prefix": "#blue",
+    "body": "0x0000ffff",
+    "description": "Blue color. rgba(0, 0, 255, 255)"
+  },
+  "white": {
+    "prefix": "#white",
+    "body": "0xffffffff",
+    "description": "White color. rgba(255, 255, 255, 255)"
+  },
+  "transparent": {
+    "prefix": ["#black", "#invisible"],
+    "body": "0x00000000",
+    "description": "Black / invisible color. rgba(0, 0, 0, 0)"
+  },
+  "gray": {
+    "prefix": "#gray",
+    "body": "0x7f7f7fff",
+    "description": "Gray color. rgba(127, 127, 127, 255)"
+  },
+  "cyan": {
+    "prefix": "#cyan",
+    "body": "0x00ffffff",
+    "description": "Cyan color. rgba(0, 255, 255, 255)"
+  },
+  "magenta": {
+    "prefix": "#magenta",
+    "body": "0xff00ffff",
+    "description": "Magenta color. rgba(255, 0, 255, 255)"
+  },
+  "yellow": {
+    "prefix": "#yellow",
+    "body": "0xffff00ff",
+    "description": "Yellow color. rgba(255, 255, 0, 255)"
+  },
+  "orange": {
+    "prefix": "#orange",
+    "body": "0xff7f00ff",
+    "description": "White color. rgba(255, 127, 0, 255)"
   }
 }

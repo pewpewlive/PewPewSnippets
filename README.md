@@ -1,7 +1,10 @@
-![PewPewSnippets](https://github.com/Tasty-Kiwi/PewPewSnippets/raw/master/assets/icon.png)
+![PewPewSnippets](assets/icon.png)
 
 # PewPew Snippets
-A Visual Studio Code extension that has useful snippets for PewPew Live custom level making.
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](assets/built-for-vs-code.svg)](https://forthebadge.com)
+
+An essential tool to any PewPew Live level creator.
 
 ## Usage:
 Download this extension:

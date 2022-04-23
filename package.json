@@ -1,35 +1,42 @@
 {
-    "name": "pewpew-snippets",
-    "displayName": "PewPew Snippets",
-    "description": "A Visual Studio Code extension that has useful snippets to enhance level creation for PewPew Live.",
-    "publisher": "Tasty-Kiwi",
-    "version": "1.1.0",
-    "badges": [{
-        "url": "https://img.shields.io/badge/Come%20to%20see%20our-GitHub%20repository-success?style=for-the-badge&logo=github",
-        "href": "https://github.com/Tasty-Kiwi/PewPewSnippets",
-        "description": "Come to see our GitHub repository"
-        }],
-        "engines": {
-            "vscode": "^1.53.0"
-        },
-        "license": "MIT",
-        "repository": {
-            "type": "git",
-            "url": "https://github.com/Tasty-Kiwi/PewPewSnippets"
-        },
-        "homepage": "https://github.com/Tasty-Kiwi/PewPewSnippets/blob/master/README.md",
-        "bugs": {
-            "url": "https://github.com/Tasty-Kiwi/PewPewSnippets/issues"
-        },
-        "categories": ["Snippets"],
-        "icon": "assets/icon.png",
-        "contributes": {
-            "snippets": [
-                {
-                    "language": "lua",
-                    "path": "./snippets/snippets.code-snippets"
-                }
-            ]
-        }
+  "name": "pewpew-snippets",
+  "displayName": "PewPew Snippets",
+  "description": "An essential tool to any PewPew Live level creator.",
+  "publisher": "Tasty-Kiwi",
+  "version": "1.2.0",
+  "badges": [
+    {
+      "url": "https://img.shields.io/badge/Come%20to%20see%20our-GitHub%20repository-success?style=for-the-badge&logo=github",
+      "href": "https://github.com/Tasty-Kiwi/PewPewSnippets",
+      "description": "Come to see our GitHub repository"
     }
-    
+  ],
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tasty-Kiwi/PewPewSnippets"
+  },
+  "homepage": "https://github.com/Tasty-Kiwi/PewPewSnippets/blob/master/README.md",
+  "bugs": {
+    "url": "https://github.com/Tasty-Kiwi/PewPewSnippets/issues"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "icon": "assets/icon.png",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "lua",
+        "path": "./snippets/lua.code-snippets"
+      },
+      {
+        "language": "json",
+        "path": "./snippets/json.code-snippets"
+      }
+    ]
+  }
+}

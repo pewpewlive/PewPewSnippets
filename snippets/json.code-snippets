@@ -1,0 +1,39 @@
+/**
+ * PewPew snippets. Copyright (c) 2022 Tasty Kiwi (Dominykas M.).
+ * This project is licensed under MIT license.
+ */
+
+{
+  /*  manifest.json snippets  */
+  "name": {
+    "prefix": "name",
+    "body": "\"name\": \"$1\"",
+    "description": "The name of the level."
+  },
+  "descriptions": {
+    "prefix": "descriptions",
+    "body": "\"descriptions\": [\"$1\"]",
+    "description": "A short description for your level."
+  },
+  "entry_point": {
+    "prefix": "entry_point",
+    "body": "\"entry_point\": \"${1:level.lua}\"",
+    "description": "The path to the main entry point of the level."
+  },
+  "has_score_leaderboard": {
+    "prefix": "has_score_leaderboard",
+    "body": "\"has_score_leaderboard\": ${1:true}",
+    "description": "A boolean that specifies whether the level should have a score leaderboard."
+  },
+  "rank_thresholds_1p": {
+    "prefix": "rank_thresholds_1p",
+    "body": [
+      "\"rank_thresholds_1p\": {",
+      "  \"bronze\": $1,",
+      "  \"silver\": $2,",
+      "  \"gold\": $3",
+      "}"
+    ],
+    "description": "Contains the requirements for the players to unlock bronze, silver, and gold stars."
+  }
+}
