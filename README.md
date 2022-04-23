@@ -1,7 +1,7 @@
 ![PewPewSnippets](assets/icon.png)
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
-[![forthebadge](assets/built-for-vs-code.svg)](https://forthebadge.com)
+[![forthebadge](assets/built-with-love.png)](https://forthebadge.com)
+[![forthebadge](assets/built-for-vs-code.png)](https://forthebadge.com)
 
 # PewPew Snippets
 An essential tool to any PewPew Live level creator.
