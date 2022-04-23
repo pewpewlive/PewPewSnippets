@@ -19,6 +19,8 @@ Then just do `vsce package` to build an extension.
 ## Contributing:
 Feel free to do it! Useful resources for making them: 
 * [Official Visual Studio Code documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+* [ppl-utils wiki](https://github.com/jyaif/ppl-utils/wiki)
+* [jyaif.github.io/ppl-utils/](https://jyaif.github.io/ppl-utils/)
 
 ## License:
 This project is licensed under MIT license.
