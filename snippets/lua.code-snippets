@@ -422,11 +422,31 @@
     "body": "pewpew.EntityType.BAF",
     "description": "Baf Entity Type"
   },
+  "EntityType_BAF_BLUE": {
+    "prefix": "pewpew.EntityType.BAF_BLUE",
+    "body": "pewpew.EntityType.BAF_BLUE",
+    "description": "Baf blue Entity Type"
+  },
+  "EntityType_BAF_RED": {
+    "prefix": "pewpew.EntityType.BAF_RED",
+    "body": "pewpew.EntityType.BAF_RED",
+    "description": "Baf red Entity Type"
+  },
+  "EntityType_BOMB": {
+    "prefix": "pewpew.EntityType.BOMB",
+    "body": "pewpew.EntityType.BOMB",
+    "description": "Bomb Entity Type"
+  },
   "EntityType_CROWDER": {
     "prefix": "pewpew.EntityType.CROWDER",
     "body": "pewpew.EntityType.CROWDER",
     "description": "Crowder Entity Type"
   },
+  "EntityType_CUSTOMIZABLE_ENTITY": {
+    "prefix": "pewpew.EntityType.CUSTOMIZABLE_ENTITY",
+    "body": "pewpew.EntityType.CUSTOMIZABLE_ENTITY",
+    "description": "Customizable Entity Entity Type"
+  },  
   "EntityType_INERTIAC": {
     "prefix": "pewpew.EntityType.INERTIAC",
     "body": "pewpew.EntityType.INERTIAC",
@@ -452,15 +472,30 @@
     "body": "pewpew.EntityType.ROLLING_SPHERE",
     "description": "Rolling Sphere Entity Type"
   },
+  "EntityType_SHIP": {
+    "prefix": "pewpew.EntityType.SHIP",
+    "body": "pewpew.EntityType.SHIP",
+    "description": "Ship Entity Type"
+  },
   "EntityType_UFO": {
     "prefix": "pewpew.EntityType.UFO",
     "body": "pewpew.EntityType.UFO",
     "description": "UFO Entity Type"
   },
+  "EntityType_UFO_BULLET": {
+    "prefix": "pewpew.EntityType.UFO_BULLET",
+    "body": "pewpew.EntityType.UFO_BULLET",
+    "description": "UFO Bullet Entity Type"
+  },
   "EntityType_WARY": {
     "prefix": "pewpew.EntityType.WARY",
     "body": "pewpew.EntityType.WARY",
     "description": "Wary Entity Type"
+  },
+  "EntityType_WARY_MISSILE": {
+    "prefix": "pewpew.EntityType.WARY_MISSILE",
+    "body": "pewpew.EntityType.WARY_MISSILE",
+    "description": "Wary Missile Entity Type"
   },
   "MothershipType_THREE_CORNERS": {
     "prefix": "pewpew.MothershipType.THREE_CORNERS",
