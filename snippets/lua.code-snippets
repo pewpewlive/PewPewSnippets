@@ -110,6 +110,11 @@
     "body": "pewpew.get_entities_colliding_with_disk(${1:center_x}, ${2:center_y}, ${3:radius})",
     "description": "Returns the list of collidable entities (which includes all enemies) that overlap with the given disk."
   },
+  "get_all_entities": {
+    "prefix": "pewpew.get_all_entities",
+    "body": "pewpew.get_all_entities()",
+    "description": "Returns a table containing all entities."
+  },
   "get_entity_count": {
     "prefix": "pewpew.get_entity_count",
     "body": "pewpew.get_entity_count($0)",
