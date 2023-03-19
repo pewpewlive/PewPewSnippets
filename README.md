@@ -12,7 +12,7 @@ Download this extension:
 * Visual Studio Code marketplace: [Download here](https://marketplace.visualstudio.com/items?itemName=TastyKiwi.pewpew-snippets)
 
 ## Building it
-You need to have node.js and vsce ( `npm install -g vsce` ).
+You need to have node.js and vsce ( `npm install -g @vscode/vsce` ).
 
 Then just do `vsce package` to build an extension.
 
