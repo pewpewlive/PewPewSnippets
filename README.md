@@ -8,8 +8,9 @@ An essential tool to any PewPew Live level creator.
 
 ## Usage:
 Download this extension:
-* `.vsix` extension: [GitHub Releases](https://github.com/Tasty-Kiwi/Pewhelp-vscode/releases)
-* Visual Studio Code marketplace: [Download here](https://marketplace.visualstudio.com/items?itemName=TastyKiwi.pewpew-snippets)
+- Visual Studio Code marketplace: [Download here](https://marketplace.visualstudio.com/items?itemName=TastyKiwi.pewpew-snippets)
+- `.vsix` extension: [GitHub Releases](https://github.com/Tasty-Kiwi/Pewhelp-vscode/releases)
+
 
 ## Building it
 You need to have node.js and vsce ( `npm install -g @vscode/vsce` ).
