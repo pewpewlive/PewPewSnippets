@@ -22,9 +22,9 @@ You need to run `./generator/generate_snippets.ps1` in PowerShell.
 
 ## Contributing:
 Feel free to do it! Useful resources for making them: 
-* [Official Visual Studio Code documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
-* [ppl-utils wiki](https://github.com/jyaif/ppl-utils/wiki)
-* [jyaif.github.io/ppl-utils/](https://jyaif.github.io/ppl-utils/)
+- [Official Visual Studio Code documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
+- [ppl-utils wiki](https://github.com/jyaif/ppl-utils/wiki)
+- [jyaif.github.io/ppl-utils/](https://jyaif.github.io/ppl-utils/)
 
 ## License:
 This project is licensed under MIT license.
