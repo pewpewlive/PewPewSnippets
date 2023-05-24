@@ -15,6 +15,11 @@
     "body": "\"descriptions\": [\"$1\"]",
     "description": "A short description for your level."
   },
+  "information": {
+    "prefix": "information",
+    "body": "\"information\": \"$1\"",
+    "description": "Information regarding your level. Up to 350 characters long."
+  },
   "entry_point": {
     "prefix": "entry_point",
     "body": "\"entry_point\": \"${1:level.lua}\"",
