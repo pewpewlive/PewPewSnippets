@@ -16,6 +16,9 @@ You need to have node.js and vsce ( `npm install -g @vscode/vsce` ).
 
 Then just do `vsce package` to build an extension.
 
+## Generating snippets
+You need to run `./generator/generate_snippets.ps1` in PowerShell.
+
 ## Contributing:
 Feel free to do it! Useful resources for making them: 
 * [Official Visual Studio Code documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
