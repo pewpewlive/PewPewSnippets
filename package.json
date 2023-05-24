@@ -27,6 +27,18 @@
         "path": "./snippets/lua.code-snippets"
       },
       {
+        "language": "lua",
+        "path": "./snippets/generated/pewpew-enums.code-snippets"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/generated/pewpew-funcs.code-snippets"
+      },
+      {
+        "language": "lua",
+        "path": "./snippets/generated/fmath-funcs.code-snippets"
+      },
+      {
         "language": "json",
         "path": "./snippets/json.code-snippets"
       }
