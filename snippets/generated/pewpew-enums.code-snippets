@@ -1,203 +1,203 @@
 // Auto-generated PewPew enums from ppl-utils (https://github.com/pewpewlive/ppl-utils)
 {
-  "CannonType_FOUR_DIRECTIONS": {
-    "body": "pewpew.CannonType.FOUR_DIRECTIONS",
-    "prefix": "pewpew.CannonType.FOUR_DIRECTIONS"
-  },
-  "CannonFrequency_FREQ_30": {
-    "body": "pewpew.CannonFrequency.FREQ_30",
-    "prefix": "pewpew.CannonFrequency.FREQ_30"
-  },
-  "CannonType_DOUBLE_SWIPE": {
-    "body": "pewpew.CannonType.DOUBLE_SWIPE",
-    "prefix": "pewpew.CannonType.DOUBLE_SWIPE"
-  },
-  "CannonFrequency_FREQ_5": {
-    "body": "pewpew.CannonFrequency.FREQ_5",
-    "prefix": "pewpew.CannonFrequency.FREQ_5"
-  },
-  "EntityType_BAF_BLUE": {
-    "body": "pewpew.EntityType.BAF_BLUE",
-    "prefix": "pewpew.EntityType.BAF_BLUE"
+  "EntityType_ASTEROID": {
+    "prefix": "pewpew.EntityType.ASTEROID",
+    "body": "pewpew.EntityType.ASTEROID"
   },
   "EntityType_BAF": {
-    "body": "pewpew.EntityType.BAF",
-    "prefix": "pewpew.EntityType.BAF"
+    "prefix": "pewpew.EntityType.BAF",
+    "body": "pewpew.EntityType.BAF"
   },
   "EntityType_INERTIAC": {
-    "body": "pewpew.EntityType.INERTIAC",
-    "prefix": "pewpew.EntityType.INERTIAC"
-  },
-  "MothershipType_FOUR_CORNERS": {
-    "body": "pewpew.MothershipType.FOUR_CORNERS",
-    "prefix": "pewpew.MothershipType.FOUR_CORNERS"
-  },
-  "EntityType_MOTHERSHIP_BULLET": {
-    "body": "pewpew.EntityType.MOTHERSHIP_BULLET",
-    "prefix": "pewpew.EntityType.MOTHERSHIP_BULLET"
-  },
-  "BombType_ATOMIZE": {
-    "body": "pewpew.BombType.ATOMIZE",
-    "prefix": "pewpew.BombType.ATOMIZE"
-  },
-  "EntityType_UFO": {
-    "body": "pewpew.EntityType.UFO",
-    "prefix": "pewpew.EntityType.UFO"
-  },
-  "BombType_FREEZE": {
-    "body": "pewpew.BombType.FREEZE",
-    "prefix": "pewpew.BombType.FREEZE"
-  },
-  "BombType_REPULSIVE": {
-    "body": "pewpew.BombType.REPULSIVE",
-    "prefix": "pewpew.BombType.REPULSIVE"
-  },
-  "EntityType_SHIP": {
-    "body": "pewpew.EntityType.SHIP",
-    "prefix": "pewpew.EntityType.SHIP"
-  },
-  "EntityType_CROWDER": {
-    "body": "pewpew.EntityType.CROWDER",
-    "prefix": "pewpew.EntityType.CROWDER"
-  },
-  "WeaponType_FREEZE_EXPLOSION": {
-    "body": "pewpew.WeaponType.FREEZE_EXPLOSION",
-    "prefix": "pewpew.WeaponType.FREEZE_EXPLOSION"
-  },
-  "MothershipType_THREE_CORNERS": {
-    "body": "pewpew.MothershipType.THREE_CORNERS",
-    "prefix": "pewpew.MothershipType.THREE_CORNERS"
-  },
-  "BombType_SMALL_ATOMIZE": {
-    "body": "pewpew.BombType.SMALL_ATOMIZE",
-    "prefix": "pewpew.BombType.SMALL_ATOMIZE"
-  },
-  "WeaponType_ATOMIZE_EXPLOSION": {
-    "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION",
-    "prefix": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
-  },
-  "CannonFrequency_FREQ_10": {
-    "body": "pewpew.CannonFrequency.FREQ_10",
-    "prefix": "pewpew.CannonFrequency.FREQ_10"
-  },
-  "CannonType_SINGLE": {
-    "body": "pewpew.CannonType.SINGLE",
-    "prefix": "pewpew.CannonType.SINGLE"
-  },
-  "MothershipType_SIX_CORNERS": {
-    "body": "pewpew.MothershipType.SIX_CORNERS",
-    "prefix": "pewpew.MothershipType.SIX_CORNERS"
-  },
-  "CannonType_HEMISPHERE": {
-    "body": "pewpew.CannonType.HEMISPHERE",
-    "prefix": "pewpew.CannonType.HEMISPHERE"
-  },
-  "CannonFrequency_FREQ_15": {
-    "body": "pewpew.CannonFrequency.FREQ_15",
-    "prefix": "pewpew.CannonFrequency.FREQ_15"
-  },
-  "EntityType_BAF_RED": {
-    "body": "pewpew.EntityType.BAF_RED",
-    "prefix": "pewpew.EntityType.BAF_RED"
-  },
-  "EntityType_CUSTOMIZABLE_ENTITY": {
-    "body": "pewpew.EntityType.CUSTOMIZABLE_ENTITY",
-    "prefix": "pewpew.EntityType.CUSTOMIZABLE_ENTITY"
-  },
-  "EntityType_WARY": {
-    "body": "pewpew.EntityType.WARY",
-    "prefix": "pewpew.EntityType.WARY"
-  },
-  "CannonFrequency_FREQ_2": {
-    "body": "pewpew.CannonFrequency.FREQ_2",
-    "prefix": "pewpew.CannonFrequency.FREQ_2"
-  },
-  "CannonType_TIC_TOC": {
-    "body": "pewpew.CannonType.TIC_TOC",
-    "prefix": "pewpew.CannonType.TIC_TOC"
-  },
-  "CannonFrequency_FREQ_1": {
-    "body": "pewpew.CannonFrequency.FREQ_1",
-    "prefix": "pewpew.CannonFrequency.FREQ_1"
-  },
-  "MothershipType_SEVEN_CORNERS": {
-    "body": "pewpew.MothershipType.SEVEN_CORNERS",
-    "prefix": "pewpew.MothershipType.SEVEN_CORNERS"
-  },
-  "EntityType_ROLLING_SPHERE": {
-    "body": "pewpew.EntityType.ROLLING_SPHERE",
-    "prefix": "pewpew.EntityType.ROLLING_SPHERE"
-  },
-  "CannonFrequency_FREQ_6": {
-    "body": "pewpew.CannonFrequency.FREQ_6",
-    "prefix": "pewpew.CannonFrequency.FREQ_6"
-  },
-  "EntityType_BOMB_EXPLOSION": {
-    "body": "pewpew.EntityType.BOMB_EXPLOSION",
-    "prefix": "pewpew.EntityType.BOMB_EXPLOSION"
-  },
-  "CannonFrequency_FREQ_7_5": {
-    "body": "pewpew.CannonFrequency.FREQ_7_5",
-    "prefix": "pewpew.CannonFrequency.FREQ_7_5"
+    "prefix": "pewpew.EntityType.INERTIAC",
+    "body": "pewpew.EntityType.INERTIAC"
   },
   "EntityType_MOTHERSHIP": {
-    "body": "pewpew.EntityType.MOTHERSHIP",
-    "prefix": "pewpew.EntityType.MOTHERSHIP"
+    "prefix": "pewpew.EntityType.MOTHERSHIP",
+    "body": "pewpew.EntityType.MOTHERSHIP"
   },
-  "CannonType_DOUBLE": {
-    "body": "pewpew.CannonType.DOUBLE",
-    "prefix": "pewpew.CannonType.DOUBLE"
-  },
-  "BombType_SMALL_FREEZE": {
-    "body": "pewpew.BombType.SMALL_FREEZE",
-    "prefix": "pewpew.BombType.SMALL_FREEZE"
-  },
-  "EntityType_UFO_BULLET": {
-    "body": "pewpew.EntityType.UFO_BULLET",
-    "prefix": "pewpew.EntityType.UFO_BULLET"
-  },
-  "MothershipType_FIVE_CORNERS": {
-    "body": "pewpew.MothershipType.FIVE_CORNERS",
-    "prefix": "pewpew.MothershipType.FIVE_CORNERS"
-  },
-  "EntityType_ASTEROID": {
-    "body": "pewpew.EntityType.ASTEROID",
-    "prefix": "pewpew.EntityType.ASTEROID"
-  },
-  "CannonFrequency_FREQ_3": {
-    "body": "pewpew.CannonFrequency.FREQ_3",
-    "prefix": "pewpew.CannonFrequency.FREQ_3"
-  },
-  "EntityType_BOMB": {
-    "body": "pewpew.EntityType.BOMB",
-    "prefix": "pewpew.EntityType.BOMB"
-  },
-  "EntityType_WARY_MISSILE": {
-    "body": "pewpew.EntityType.WARY_MISSILE",
-    "prefix": "pewpew.EntityType.WARY_MISSILE"
-  },
-  "EntityType_PLAYER_EXPLOSION": {
-    "body": "pewpew.EntityType.PLAYER_EXPLOSION",
-    "prefix": "pewpew.EntityType.PLAYER_EXPLOSION"
-  },
-  "CannonType_TRIPLE": {
-    "body": "pewpew.CannonType.TRIPLE",
-    "prefix": "pewpew.CannonType.TRIPLE"
-  },
-  "EntityType_PLAYER_BULLET": {
-    "body": "pewpew.EntityType.PLAYER_BULLET",
-    "prefix": "pewpew.EntityType.PLAYER_BULLET"
-  },
-  "WeaponType_BULLET": {
-    "body": "pewpew.WeaponType.BULLET",
-    "prefix": "pewpew.WeaponType.BULLET"
+  "EntityType_MOTHERSHIP_BULLET": {
+    "prefix": "pewpew.EntityType.MOTHERSHIP_BULLET",
+    "body": "pewpew.EntityType.MOTHERSHIP_BULLET"
   },
   "EntityType_ROLLING_CUBE": {
-    "body": "pewpew.EntityType.ROLLING_CUBE",
-    "prefix": "pewpew.EntityType.ROLLING_CUBE"
+    "prefix": "pewpew.EntityType.ROLLING_CUBE",
+    "body": "pewpew.EntityType.ROLLING_CUBE"
+  },
+  "EntityType_ROLLING_SPHERE": {
+    "prefix": "pewpew.EntityType.ROLLING_SPHERE",
+    "body": "pewpew.EntityType.ROLLING_SPHERE"
+  },
+  "EntityType_UFO": {
+    "prefix": "pewpew.EntityType.UFO",
+    "body": "pewpew.EntityType.UFO"
+  },
+  "EntityType_WARY": {
+    "prefix": "pewpew.EntityType.WARY",
+    "body": "pewpew.EntityType.WARY"
+  },
+  "EntityType_CROWDER": {
+    "prefix": "pewpew.EntityType.CROWDER",
+    "body": "pewpew.EntityType.CROWDER"
+  },
+  "EntityType_CUSTOMIZABLE_ENTITY": {
+    "prefix": "pewpew.EntityType.CUSTOMIZABLE_ENTITY",
+    "body": "pewpew.EntityType.CUSTOMIZABLE_ENTITY"
+  },
+  "EntityType_SHIP": {
+    "prefix": "pewpew.EntityType.SHIP",
+    "body": "pewpew.EntityType.SHIP"
+  },
+  "EntityType_BOMB": {
+    "prefix": "pewpew.EntityType.BOMB",
+    "body": "pewpew.EntityType.BOMB"
+  },
+  "EntityType_BAF_BLUE": {
+    "prefix": "pewpew.EntityType.BAF_BLUE",
+    "body": "pewpew.EntityType.BAF_BLUE"
+  },
+  "EntityType_BAF_RED": {
+    "prefix": "pewpew.EntityType.BAF_RED",
+    "body": "pewpew.EntityType.BAF_RED"
+  },
+  "EntityType_WARY_MISSILE": {
+    "prefix": "pewpew.EntityType.WARY_MISSILE",
+    "body": "pewpew.EntityType.WARY_MISSILE"
+  },
+  "EntityType_UFO_BULLET": {
+    "prefix": "pewpew.EntityType.UFO_BULLET",
+    "body": "pewpew.EntityType.UFO_BULLET"
+  },
+  "EntityType_PLAYER_BULLET": {
+    "prefix": "pewpew.EntityType.PLAYER_BULLET",
+    "body": "pewpew.EntityType.PLAYER_BULLET"
+  },
+  "EntityType_BOMB_EXPLOSION": {
+    "prefix": "pewpew.EntityType.BOMB_EXPLOSION",
+    "body": "pewpew.EntityType.BOMB_EXPLOSION"
+  },
+  "EntityType_PLAYER_EXPLOSION": {
+    "prefix": "pewpew.EntityType.PLAYER_EXPLOSION",
+    "body": "pewpew.EntityType.PLAYER_EXPLOSION"
+  },
+  "MothershipType_THREE_CORNERS": {
+    "prefix": "pewpew.MothershipType.THREE_CORNERS",
+    "body": "pewpew.MothershipType.THREE_CORNERS"
+  },
+  "MothershipType_FOUR_CORNERS": {
+    "prefix": "pewpew.MothershipType.FOUR_CORNERS",
+    "body": "pewpew.MothershipType.FOUR_CORNERS"
+  },
+  "MothershipType_FIVE_CORNERS": {
+    "prefix": "pewpew.MothershipType.FIVE_CORNERS",
+    "body": "pewpew.MothershipType.FIVE_CORNERS"
+  },
+  "MothershipType_SIX_CORNERS": {
+    "prefix": "pewpew.MothershipType.SIX_CORNERS",
+    "body": "pewpew.MothershipType.SIX_CORNERS"
+  },
+  "MothershipType_SEVEN_CORNERS": {
+    "prefix": "pewpew.MothershipType.SEVEN_CORNERS",
+    "body": "pewpew.MothershipType.SEVEN_CORNERS"
+  },
+  "CannonType_SINGLE": {
+    "prefix": "pewpew.CannonType.SINGLE",
+    "body": "pewpew.CannonType.SINGLE"
+  },
+  "CannonType_TIC_TOC": {
+    "prefix": "pewpew.CannonType.TIC_TOC",
+    "body": "pewpew.CannonType.TIC_TOC"
+  },
+  "CannonType_DOUBLE": {
+    "prefix": "pewpew.CannonType.DOUBLE",
+    "body": "pewpew.CannonType.DOUBLE"
+  },
+  "CannonType_TRIPLE": {
+    "prefix": "pewpew.CannonType.TRIPLE",
+    "body": "pewpew.CannonType.TRIPLE"
+  },
+  "CannonType_FOUR_DIRECTIONS": {
+    "prefix": "pewpew.CannonType.FOUR_DIRECTIONS",
+    "body": "pewpew.CannonType.FOUR_DIRECTIONS"
+  },
+  "CannonType_DOUBLE_SWIPE": {
+    "prefix": "pewpew.CannonType.DOUBLE_SWIPE",
+    "body": "pewpew.CannonType.DOUBLE_SWIPE"
+  },
+  "CannonType_HEMISPHERE": {
+    "prefix": "pewpew.CannonType.HEMISPHERE",
+    "body": "pewpew.CannonType.HEMISPHERE"
+  },
+  "CannonFrequency_FREQ_30": {
+    "prefix": "pewpew.CannonFrequency.FREQ_30",
+    "body": "pewpew.CannonFrequency.FREQ_30"
+  },
+  "CannonFrequency_FREQ_15": {
+    "prefix": "pewpew.CannonFrequency.FREQ_15",
+    "body": "pewpew.CannonFrequency.FREQ_15"
+  },
+  "CannonFrequency_FREQ_10": {
+    "prefix": "pewpew.CannonFrequency.FREQ_10",
+    "body": "pewpew.CannonFrequency.FREQ_10"
+  },
+  "CannonFrequency_FREQ_7_5": {
+    "prefix": "pewpew.CannonFrequency.FREQ_7_5",
+    "body": "pewpew.CannonFrequency.FREQ_7_5"
+  },
+  "CannonFrequency_FREQ_6": {
+    "prefix": "pewpew.CannonFrequency.FREQ_6",
+    "body": "pewpew.CannonFrequency.FREQ_6"
+  },
+  "CannonFrequency_FREQ_5": {
+    "prefix": "pewpew.CannonFrequency.FREQ_5",
+    "body": "pewpew.CannonFrequency.FREQ_5"
+  },
+  "CannonFrequency_FREQ_3": {
+    "prefix": "pewpew.CannonFrequency.FREQ_3",
+    "body": "pewpew.CannonFrequency.FREQ_3"
+  },
+  "CannonFrequency_FREQ_2": {
+    "prefix": "pewpew.CannonFrequency.FREQ_2",
+    "body": "pewpew.CannonFrequency.FREQ_2"
+  },
+  "CannonFrequency_FREQ_1": {
+    "prefix": "pewpew.CannonFrequency.FREQ_1",
+    "body": "pewpew.CannonFrequency.FREQ_1"
+  },
+  "BombType_FREEZE": {
+    "prefix": "pewpew.BombType.FREEZE",
+    "body": "pewpew.BombType.FREEZE"
+  },
+  "BombType_REPULSIVE": {
+    "prefix": "pewpew.BombType.REPULSIVE",
+    "body": "pewpew.BombType.REPULSIVE"
+  },
+  "BombType_ATOMIZE": {
+    "prefix": "pewpew.BombType.ATOMIZE",
+    "body": "pewpew.BombType.ATOMIZE"
+  },
+  "BombType_SMALL_ATOMIZE": {
+    "prefix": "pewpew.BombType.SMALL_ATOMIZE",
+    "body": "pewpew.BombType.SMALL_ATOMIZE"
+  },
+  "BombType_SMALL_FREEZE": {
+    "prefix": "pewpew.BombType.SMALL_FREEZE",
+    "body": "pewpew.BombType.SMALL_FREEZE"
+  },
+  "WeaponType_BULLET": {
+    "prefix": "pewpew.WeaponType.BULLET",
+    "body": "pewpew.WeaponType.BULLET"
+  },
+  "WeaponType_FREEZE_EXPLOSION": {
+    "prefix": "pewpew.WeaponType.FREEZE_EXPLOSION",
+    "body": "pewpew.WeaponType.FREEZE_EXPLOSION"
   },
   "WeaponType_REPULSIVE_EXPLOSION": {
-    "body": "pewpew.WeaponType.REPULSIVE_EXPLOSION",
-    "prefix": "pewpew.WeaponType.REPULSIVE_EXPLOSION"
+    "prefix": "pewpew.WeaponType.REPULSIVE_EXPLOSION",
+    "body": "pewpew.WeaponType.REPULSIVE_EXPLOSION"
+  },
+  "WeaponType_ATOMIZE_EXPLOSION": {
+    "prefix": "pewpew.WeaponType.ATOMIZE_EXPLOSION",
+    "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
   }
 }

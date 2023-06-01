@@ -1,58 +1,58 @@
 // Auto-generated Fmath funcs from ppl-utils (https://github.com/pewpewlive/ppl-utils)
 {
-  "abs_fixedpoint": {
-    "description": "Returns the absolute value.",
-    "body": "fmath.abs_fixedpoint(${1:value})",
-    "prefix": "fmath.abs_fixedpoint"
-  },
-  "sincos": {
-    "description": "Returns the sinus and cosinus of `angle`. `angle` is in radian.",
-    "body": "fmath.sincos(${1:angle})",
-    "prefix": "fmath.sincos"
-  },
-  "from_fraction": {
-    "description": "Returns the fixedpoint value representing the fraction `numerator`/`denominator`. `denominator` must not be equal to zero.",
-    "body": "fmath.from_fraction(${1:numerator}, ${2:denominator})",
-    "prefix": "fmath.from_fraction"
-  },
-  "sqrt": {
-    "description": "Returns the square root of `x`. `x` must be greater or equal to 0.",
-    "body": "fmath.sqrt(${1:x})",
-    "prefix": "fmath.sqrt"
-  },
-  "to_fixedpoint": {
-    "description": "Returns a fixedpoint value with the integral part of `value`, and no fractional part.",
-    "body": "fmath.to_fixedpoint(${1:value})",
-    "prefix": "fmath.to_fixedpoint"
-  },
-  "atan2": {
-    "description": "Returns the principal value of the arc tangent of y/x. Returns a value in the range [0, 2π[.",
-    "body": "fmath.atan2(${1:y}, ${2:x})",
-    "prefix": "fmath.atan2"
-  },
   "max_fixedpoint": {
-    "description": "Returns the maximum value a fixedpoint integer can take.",
+    "prefix": "fmath.max_fixedpoint",
     "body": "fmath.max_fixedpoint()",
-    "prefix": "fmath.max_fixedpoint"
+    "description": "Returns the maximum value a fixedpoint integer can take."
   },
   "random_fixedpoint": {
-    "description": "Returns a random fixedpoint value in the range [`min`, `max`]. `max` must be greater or equal to `min`.",
+    "prefix": "fmath.random_fixedpoint",
     "body": "fmath.random_fixedpoint(${1:min}, ${2:max})",
-    "prefix": "fmath.random_fixedpoint"
-  },
-  "to_int": {
-    "description": "Returns the integral part of the `value`.",
-    "body": "fmath.to_int(${1:value})",
-    "prefix": "fmath.to_int"
+    "description": "Returns a random fixedpoint value in the range [`min`, `max`]. `max` must be greater or equal to `min`."
   },
   "random_int": {
-    "description": "Returns an integer in the range [`min`, `max`]. `max` must be greater or equal to `min`.",
+    "prefix": "fmath.random_int",
     "body": "fmath.random_int(${1:min}, ${2:max})",
-    "prefix": "fmath.random_int"
+    "description": "Returns an integer in the range [`min`, `max`]. `max` must be greater or equal to `min`."
+  },
+  "sqrt": {
+    "prefix": "fmath.sqrt",
+    "body": "fmath.sqrt(${1:x})",
+    "description": "Returns the square root of `x`. `x` must be greater or equal to 0."
+  },
+  "from_fraction": {
+    "prefix": "fmath.from_fraction",
+    "body": "fmath.from_fraction(${1:numerator}, ${2:denominator})",
+    "description": "Returns the fixedpoint value representing the fraction `numerator`/`denominator`. `denominator` must not be equal to zero."
+  },
+  "to_int": {
+    "prefix": "fmath.to_int",
+    "body": "fmath.to_int(${1:value})",
+    "description": "Returns the integral part of the `value`."
+  },
+  "abs_fixedpoint": {
+    "prefix": "fmath.abs_fixedpoint",
+    "body": "fmath.abs_fixedpoint(${1:value})",
+    "description": "Returns the absolute value."
+  },
+  "to_fixedpoint": {
+    "prefix": "fmath.to_fixedpoint",
+    "body": "fmath.to_fixedpoint(${1:value})",
+    "description": "Returns a fixedpoint value with the integral part of `value`, and no fractional part."
+  },
+  "sincos": {
+    "prefix": "fmath.sincos",
+    "body": "fmath.sincos(${1:angle})",
+    "description": "Returns the sinus and cosinus of `angle`. `angle` is in radian."
+  },
+  "atan2": {
+    "prefix": "fmath.atan2",
+    "body": "fmath.atan2(${1:y}, ${2:x})",
+    "description": "Returns the principal value of the arc tangent of y/x. Returns a value in the range [0, 2π[."
   },
   "tau": {
-    "description": "Returns τ (aka 2π).",
+    "prefix": "fmath.tau",
     "body": "fmath.tau()",
-    "prefix": "fmath.tau"
+    "description": "Returns τ (aka 2π)."
   }
 }
