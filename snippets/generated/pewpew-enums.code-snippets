@@ -184,6 +184,22 @@
     "prefix": "pewpew.BombType.SMALL_FREEZE",
     "body": "pewpew.BombType.SMALL_FREEZE"
   },
+  "BonusType_REINSTANTIATION": {
+    "prefix": "pewpew.BonusType.REINSTANTIATION",
+    "body": "pewpew.BonusType.REINSTANTIATION"
+  },
+  "BonusType_SHIELD": {
+    "prefix": "pewpew.BonusType.SHIELD",
+    "body": "pewpew.BonusType.SHIELD"
+  },
+  "BonusType_SPEED": {
+    "prefix": "pewpew.BonusType.SPEED",
+    "body": "pewpew.BonusType.SPEED"
+  },
+  "BonusType_WEAPON": {
+    "prefix": "pewpew.BonusType.WEAPON",
+    "body": "pewpew.BonusType.WEAPON"
+  },
   "WeaponType_BULLET": {
     "prefix": "pewpew.WeaponType.BULLET",
     "body": "pewpew.WeaponType.BULLET"
