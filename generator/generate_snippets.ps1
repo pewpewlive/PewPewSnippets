@@ -46,8 +46,8 @@ function Out-Functions {
       $editedString = "{";
       if ($func.parameters[$i].type -eq "Map")
       {
-        foreach ($value in $func.paramaters[$i].map_entries) {
-          $editedString += $value.name + ", "
+        foreach ($entry in $func.paramaters[$i].map_entries) {
+          $editedString += $entry.name + ", "
         }
         $editedString += "}";
       }else{
