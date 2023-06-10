@@ -47,8 +47,7 @@ function Out-Functions {
       if ($func.parameters[$i].type -eq "Map")
       {
         for ($j = 0; $j -lt $func.parameters[$i].map_entries.Count; $j++) {
-          if ($j -eq $func.parameters[$i].map_entries.Count - 1)
-          {
+          if ($j -eq $func.parameters[$i].map_entries.Count - 1) {
           $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type+ "}"
           } else {
           $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type + "}"+ ", "
