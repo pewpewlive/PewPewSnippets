@@ -50,8 +50,7 @@ function Out-Functions {
           if ($j -eq $func.parameters[$i].map_entries.Count - 1)
           {
           $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type+ "}"
-          }else
-          {
+          } else {
           $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type + "}"+ ", "
           }
         }
@@ -60,7 +59,7 @@ function Out-Functions {
         } else {
           $func_args += $editedString + "}, "
         }
-      }else{
+      } else {
         $editedString = $func.parameters[$i].name;
         if ($i -eq $func.parameters.Count - 1) {
           $func_args += "`${" + ($i + 1) + ":" + $editedString + "}"
