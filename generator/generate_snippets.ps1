@@ -49,10 +49,10 @@ function Out-Functions {
         for ($j = 0; $j -lt $func.parameters[$i].map_entries.Count; $j++) {
           if ($j -eq $func.parameters[$i].map_entries.Count - 1)
           {
-          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($i + 1) + ":" + $func.parameters[$i].map_entries[$j].type
+          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($j + 1) + ":" + $func.parameters[$i].map_entries[$j].type
           }else
           {
-          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($i + 1) + ":" + $func.parameters[$i].map_entries[$j].type + ", "
+          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($j + 1) + ":" + $func.parameters[$i].map_entries[$j].type + ", "
           }
         }
         $editedString += "}";
