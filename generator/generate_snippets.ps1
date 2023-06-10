@@ -44,8 +44,12 @@ function Out-Functions {
     $functions_obj[$func.func_name]["prefix"] = ("{0}.{1}" -f $table_name, $func.func_name)
     for ($i = 0; $i -lt $func.parameters.Count; $i++) {
       if ($i -eq $func.parameters.Count - 1) {
+        ($func.parameters[$i].name).Replace("+","{")
+        ($func.parameters[$i].name).Replace("-","}")
         $func_args += "`${" + ($i + 1) + ":" + $func.parameters[$i].name + "}"
       } else {
+        ($func.parameters[$i].name).Replace("+","{")
+        ($func.parameters[$i].name).Replace("-","}")
         $func_args += "`${" + ($i + 1) + ":" + $func.parameters[$i].name + "}, "
       }
     }
