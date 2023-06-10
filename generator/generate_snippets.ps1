@@ -49,20 +49,25 @@ function Out-Functions {
         for ($j = 0; $j -lt $func.parameters[$i].map_entries.Count; $j++) {
           if ($j -eq $func.parameters[$i].map_entries.Count - 1)
           {
-          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($j + 1) + ":" + $func.parameters[$i].map_entries[$j].type
+          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type
           }else
           {
-          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($j + 1) + ":" + $func.parameters[$i].map_entries[$j].type + ", "
+          $editedString += $func.parameters[$i].map_entries[$j].name + " =" + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type + ", "
           }
         }
         $editedString += "}";
+        if ($i -eq $func.parameters.Count - 1) {
+          $func_args += $editedString + "}"
+        } else {
+          $func_args += $editedString + "}, "
+        }
       }else{
         $editedString = $func.parameters[$i].name;
-      }
-      if ($i -eq $func.parameters.Count - 1) {
-        $func_args += "`${" + ($i + 1) + ":" + $editedString + "}"
-      } else {
-        $func_args += "`${" + ($i + 1) + ":" + $editedString + "}, "
+        if ($i -eq $func.parameters.Count - 1) {
+          $func_args += "`${" + ($i + 1) + ":" + $editedString + "}"
+        } else {
+          $func_args += "`${" + ($i + 1) + ":" + $editedString + "}, "
+        }
       }
     }
     $functions_obj[$func.func_name]["body"] = ("{0}.{1}({2})" -f $table_name, $func.func_name, $func_args)
