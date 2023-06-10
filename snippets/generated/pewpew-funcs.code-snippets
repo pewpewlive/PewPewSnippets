@@ -67,12 +67,12 @@
   },
   "configure_player": {
     "prefix": "pewpew.configure_player",
-    "body": "pewpew.configure_player(${1:player_index}, ${2:configuration})",
+    "body": "pewpew.configure_player(${1:player_index}, ${2:+has_lost =, shield = , camera_distance = , move_joystick_color = , camera_rotation_x_axis = , camera_x_override = , camera_y_override = -})",
     "description": "Configures the player at the specified `player_index`. `player_index` must in the range [0, get_number_of_players() - 1]. A `camera_distance` less than 0fx makes the camera move away from the ship. `camera_rotation_x_axis` is in radian and rotates along the X axis. To temporarily override the XY position of the camera, set both `camera_x_override` and `camera_y_override`; this will make the camera be interpolated from wherever it was, to that new position."
   },
   "configure_player_hud": {
     "prefix": "pewpew.configure_player_hud",
-    "body": "pewpew.configure_player_hud(${1:player_index}, ${2:configuration})",
+    "body": "pewpew.configure_player_hud(${1:player_index}, ${2:+top_left_line = -})",
     "description": "Configures the player's HUD.`player_index` must in the range [0, get_number_of_players() - 1]."
   },
   "get_player_configuration": {
@@ -82,7 +82,7 @@
   },
   "configure_player_ship_weapon": {
     "prefix": "pewpew.configure_player_ship_weapon",
-    "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, ${2:configuration})",
+    "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, ${2:+int frequency , int cannon , int duration-})",
     "description": "Configures the weapon of the ship identified with `ship_id` using `configuration`. `frequency` determines the frequency of the shots. `cannon` determines the type of cannon. `duration` determines the number of game ticks during which the weapon will be available. Once the duration expires, the weapon reverts to its permanent configuration. If `duration` is omitted, the weapon will be permanently set to this configuration. If `frequency` or `cannon` is omitted, the ship is configured to not have any weapon."
   },
   "add_damage_to_player_ship": {
@@ -342,7 +342,7 @@
   },
   "customizable_entity_configure_music_response": {
     "prefix": "pewpew.customizable_entity_configure_music_response",
-    "body": "pewpew.customizable_entity_configure_music_response(${1:entity_id}, ${2:config})",
+    "body": "pewpew.customizable_entity_configure_music_response(${1:entity_id}, ${2:+int color_start =, int color_end =, FixedPoint scale_x_start =, FixedPoint scale_x_end =, FixedPoint scale_y_start =, FixedPoint scale_y_end =, FixedPoint scale_z_start =, FixedPoint scale_z_end = -})",
     "description": "Configures the way the entity is going to respond to the music."
   },
   "customizable_entity_add_rotation_to_mesh": {
