@@ -43,14 +43,20 @@ function Out-Functions {
     $functions_obj[$func.func_name] = [ordered]@{}
     $functions_obj[$func.func_name]["prefix"] = ("{0}.{1}" -f $table_name, $func.func_name)
     for ($i = 0; $i -lt $func.parameters.Count; $i++) {
+      $editedString = "{";
+      if ($func.parameters[$i].type -eq "Map")
+      {
+        for ($j = 0; $j -lt $func.paramaters[$i].map_entries.Count;$j++) {
+          $editedString += $func.paramaters[$i].map_entries[$j].name + ", "
+        }
+        $editedString += "}";
+      }else{
+        $editedString = $func.parameters[$i].name;
+      }
       if ($i -eq $func.parameters.Count - 1) {
-        ($func.parameters[$i].name).Replace("+","{")
-        ($func.parameters[$i].name).Replace("-","}")
-        $func_args += "`${" + ($i + 1) + ":" + $func.parameters[$i].name + "}"
+        $func_args += "`${" + ($i + 1) + ":" + $editedString + "}"
       } else {
-        ($func.parameters[$i].name).Replace("+","{")
-        ($func.parameters[$i].name).Replace("-","}")
-        $func_args += "`${" + ($i + 1) + ":" + $func.parameters[$i].name + "}, "
+        $func_args += "`${" + ($i + 1) + ":" + $editedString + "}, "
       }
     }
     $functions_obj[$func.func_name]["body"] = ("{0}.{1}({2})" -f $table_name, $func.func_name, $func_args)
