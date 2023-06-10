@@ -55,7 +55,6 @@ function Out-Functions {
           $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type + "}"+ ", "
           }
         }
-        $editedString += "}";
         if ($i -eq $func.parameters.Count - 1) {
           $func_args += $editedString + "}"
         } else {
