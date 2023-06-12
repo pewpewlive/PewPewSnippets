@@ -67,12 +67,12 @@
   },
   "configure_player": {
     "prefix": "pewpew.configure_player",
-    "body": "pewpew.configure_player(${1:player_index}, ${2:configuration})",
+    "body": "pewpew.configure_player(${1:player_index}, {has_lost = ${2:Boolean}, shield = ${3:Int32}, camera_x_override = ${4:FixedPoint}, camera_y_override = ${5:FixedPoint}, camera_distance = ${6:FixedPoint}, camera_rotation_x_axis = ${7:FixedPoint}, move_joystick_color = ${8:Int32}, shoot_joystick_color = ${9:Int32}})",
     "description": "Configures the player at the specified `player_index`. `player_index` must in the range [0, get_number_of_players() - 1]. A `camera_distance` less than 0fx makes the camera move away from the ship. `camera_rotation_x_axis` is in radian and rotates along the X axis. To temporarily override the XY position of the camera, set both `camera_x_override` and `camera_y_override`; this will make the camera be interpolated from wherever it was, to that new position."
   },
   "configure_player_hud": {
     "prefix": "pewpew.configure_player_hud",
-    "body": "pewpew.configure_player_hud(${1:player_index}, ${2:configuration})",
+    "body": "pewpew.configure_player_hud(${1:player_index}, {top_left_line = ${2:String}})",
     "description": "Configures the player's HUD.`player_index` must in the range [0, get_number_of_players() - 1]."
   },
   "get_player_configuration": {
@@ -82,7 +82,7 @@
   },
   "configure_player_ship_weapon": {
     "prefix": "pewpew.configure_player_ship_weapon",
-    "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, ${2:configuration})",
+    "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, {frequency = ${2:Int32}, cannon = ${3:Int32}, duration = ${4:Int32}})",
     "description": "Configures the weapon of the ship identified with `ship_id` using `configuration`. `frequency` determines the frequency of the shots. `cannon` determines the type of cannon. `duration` determines the number of game ticks during which the weapon will be available. Once the duration expires, the weapon reverts to its permanent configuration. If `duration` is omitted, the weapon will be permanently set to this configuration. If `frequency` or `cannon` is omitted, the ship is configured to not have any weapon."
   },
   "add_damage_to_player_ship": {
@@ -172,7 +172,7 @@
   },
   "new_bonus": {
     "prefix": "pewpew.new_bonus",
-    "body": "pewpew.new_bonus(${1:x}, ${2:y}, ${3:type}, ${4:config})",
+    "body": "pewpew.new_bonus(${1:x}, ${2:y}, ${3:type}, {box_duration = ${4:Int32}, cannon = ${5:Int32}, frequency = ${6:Int32}, weapon_duration = ${7:Int32}, number_of_shields = ${8:Int32}, speed_factor = ${9:FixedPoint}, speed_offset = ${10:FixedPoint}, speed_duration = ${11:Int32}, taken_callback = ${12:Callback}})",
     "description": "Creates a new Bonus at the location `x`,`y` of the type `type`, and returns its entityId. For shield bonuses, the option `number_of_shields` determines how many shields are given out. For weapon bonuses, the options `cannon`, `frequency`, `weapon_duration` have the same meaning as in `pewpew.configure_player_ship_weapon`. For speed bonuses, the options `speed_factor`, `speed_offset`,and `speed_duration` have the same meaning as in `set_player_speed`. `taken_callback` is called when the bonus is taken, and is mandatory for the reinstantiation bonus. The callback receives as arguments the entity id of the bonus, the player id, and the ship's entity id. The default box duration is 400 ticks."
   },
   "new_crowder": {
@@ -182,7 +182,7 @@
   },
   "new_floating_message": {
     "prefix": "pewpew.new_floating_message",
-    "body": "pewpew.new_floating_message(${1:x}, ${2:y}, ${3:str}, ${4:config})",
+    "body": "pewpew.new_floating_message(${1:x}, ${2:y}, ${3:str}, {scale = ${4:FixedPoint}, ticks_before_fade = ${5:Int32}})",
     "description": "Creates a new floating message at the location `x`,`y`, with `str` as the message. The scale is a number that determines how large the  message will be. `1` is the default scale. `ticks_before_fade` determines how many ticks occur before the message starts to fade out. If not specified, `scale` is 1 and `ticks_before_fade` is 30. Returns the floating message's entityId."
   },
   "new_customizable_entity": {
@@ -282,7 +282,7 @@
   },
   "entity_react_to_weapon": {
     "prefix": "pewpew.entity_react_to_weapon",
-    "body": "pewpew.entity_react_to_weapon(${1:entity_id}, ${2:weapon})",
+    "body": "pewpew.entity_react_to_weapon(${1:entity_id}, {type = ${2:Int32}, x = ${3:FixedPoint}, y = ${4:FixedPoint}, player_index = ${5:Int32}})",
     "description": "Makes the entity identified by `id` react to the weapon described in `weapon_description`. Returns whether the entity reacted to the weapon. The returned value is typically used to decide whether the weapon should continue to exist or not. In the case of an explosion, `x` and `y` should store the origin of the explosion. In the case of a bullet, `x` and `y` should store the vector of the bullet."
   },
   "customizable_entity_set_position_interpolation": {
@@ -342,7 +342,7 @@
   },
   "customizable_entity_configure_music_response": {
     "prefix": "pewpew.customizable_entity_configure_music_response",
-    "body": "pewpew.customizable_entity_configure_music_response(${1:entity_id}, ${2:config})",
+    "body": "pewpew.customizable_entity_configure_music_response(${1:entity_id}, {color_start = ${2:Int32}, color_end = ${3:Int32}, scale_x_start = ${4:FixedPoint}, scale_x_end = ${5:FixedPoint}, scale_y_start = ${6:FixedPoint}, scale_y_end = ${7:FixedPoint}, scale_z_start = ${8:FixedPoint}, scale_z_end = ${9:FixedPoint}})",
     "description": "Configures the way the entity is going to respond to the music."
   },
   "customizable_entity_add_rotation_to_mesh": {
