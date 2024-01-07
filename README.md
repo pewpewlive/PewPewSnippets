@@ -6,6 +6,8 @@
 # PewPew Snippets
 An essential tool to any PewPew Live level creator.
 
+**📢 Want more advanced suggestions? Check out [PewPew Types](https://github.com/pewpewlive/PewPew-Types) or [PewPewScript](https://github.com/pewpewlive/PewPewScript).**
+
 ## Usage:
 Download this extension:
 - Visual Studio Code marketplace: [Download here](https://marketplace.visualstudio.com/items?itemName=TastyKiwi.pewpew-snippets)

@@ -1,5 +1,5 @@
 # PewPew Snippets generator
-# Copyright (c) 2023 PPMS Team & contributors.
+# Copyright (c) 2024 PPMS Team & contributors.
 # This project is licensed under MIT license.
 
 $raw_docs = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pewpewlive/ppl-utils/master/docs/raw_documentation.js").Content
@@ -48,9 +48,9 @@ function Out-Functions {
       {
         for ($j = 0; $j -lt $func.parameters[$i].map_entries.Count; $j++) {
           if ($j -eq $func.parameters[$i].map_entries.Count - 1) {
-          $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type+ "}"
+            $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type+ "}"
           } else {
-          $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type + "}"+ ", "
+            $editedString += $func.parameters[$i].map_entries[$j].name + " = " + "`${" + ($j + 1 + $i) + ":" + $func.parameters[$i].map_entries[$j].type + "}"+ ", "
           }
         }
         if ($i -eq $func.parameters.Count - 1) {
