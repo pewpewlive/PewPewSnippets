@@ -4,9 +4,13 @@
 [![forthebadge](assets/built-for-vs-code.png)](https://forthebadge.com)
 
 # PewPew Snippets
-An essential tool to any PewPew Live level creator.
+A code snippet library created for PewPew Live level development.
 
-**📢 Want more advanced suggestions? Check out [PewPew Types](https://github.com/pewpewlive/PewPew-Types) or [PewPewScript](https://github.com/pewpewlive/PewPewScript).**
+This repository hosts VS Code snippets.
+
+Neovim snippets can be found [here](https://github.com/pewpewlive/ppvs).
+
+**📢 Want more advanced suggestions? Check out [PewPew Types](https://github.com/pewpewlive/PewPew-Types)**
 
 ## Usage:
 Download this extension:
