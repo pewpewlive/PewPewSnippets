@@ -24,23 +24,23 @@
     "snippets": [
       {
         "language": "lua",
-        "path": "./snippets/lua.code-snippets"
+        "path": "./snippets/lua.json"
       },
       {
         "language": "lua",
-        "path": "./snippets/generated/pewpew-enums.code-snippets"
+        "path": "./snippets/generated/pewpew-enums.json"
       },
       {
         "language": "lua",
-        "path": "./snippets/generated/pewpew-funcs.code-snippets"
+        "path": "./snippets/generated/pewpew-funcs.json"
       },
       {
         "language": "lua",
-        "path": "./snippets/generated/fmath-funcs.code-snippets"
+        "path": "./snippets/generated/fmath-funcs.json"
       },
       {
         "language": "json",
-        "path": "./snippets/json.code-snippets"
+        "path": "./snippets/json.json"
       }
     ]
   }

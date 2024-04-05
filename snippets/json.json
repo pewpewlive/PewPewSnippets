@@ -1,10 +1,4 @@
-/**
- * PewPew snippets. Copyright (c) 2024 PPMS Team & contributors.
- * This project is licensed under MIT license.
- */
-
 {
-  /*  manifest.json snippets  */
   "name": {
     "prefix": "name",
     "body": "\"name\": \"$1\"",
