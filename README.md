@@ -6,9 +6,7 @@
 # PewPew Snippets
 A code snippet library created for PewPew Live level development.
 
-This repository hosts VS Code snippets.
-
-Neovim snippets can be found [here](https://github.com/pewpewlive/ppvs).
+This repository hosts VS Code snippets. Neovim snippets can be found [here](https://github.com/pewpewlive/ppvs).
 
 **📢 Want more advanced suggestions? Check out [PewPew Types](https://github.com/pewpewlive/PewPew-Types)**
 
