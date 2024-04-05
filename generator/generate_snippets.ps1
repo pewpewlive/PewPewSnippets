@@ -2,10 +2,7 @@
 # Copyright (c) 2024 PPMS Team & contributors.
 # This project is licensed under MIT license.
 
-$raw_docs = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pewpewlive/ppl-utils/master/docs/raw_documentation.js").Content
-
-# Strip `var documentation = ` to make it compatible with JSON
-$raw_docs = $raw_docs.Replace("var documentation = ", "")
+$raw_docs = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pewpewlive/ppl-docs/master/raw_documentation.json").Content
 
 $docs_obj = ConvertFrom-Json $raw_docs -AsHashtable
 
@@ -78,6 +75,6 @@ $pewpew_enums = ConvertTo-Json (Out-Enums $pewpew.name $pewpew.enums)
 $pewpew_functions = ConvertTo-Json (Out-Functions $pewpew.name $pewpew.functions)
 $fmath_functions = ConvertTo-Json (Out-Functions $fmath.name $fmath.functions)
 
-"// Auto-generated PewPew enums from ppl-utils (https://github.com/pewpewlive/ppl-utils)`n$pewpew_enums" | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-enums.code-snippets"
-"// Auto-generated PewPew funcs from ppl-utils (https://github.com/pewpewlive/ppl-utils)`n$pewpew_functions" | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-funcs.code-snippets"
-"// Auto-generated Fmath funcs from ppl-utils (https://github.com/pewpewlive/ppl-utils)`n$fmath_functions" | Out-File -Encoding utf8 -FilePath "./snippets/generated/fmath-funcs.code-snippets"
+$pewpew_enums | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-enums.code-snippets"
+$pewpew_functions | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-funcs.code-snippets"
+$fmath_functions | Out-File -Encoding utf8 -FilePath "./snippets/generated/fmath-funcs.code-snippets"

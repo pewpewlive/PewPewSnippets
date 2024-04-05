@@ -1,4 +1,3 @@
-// Auto-generated PewPew funcs from ppl-utils (https://github.com/pewpewlive/ppl-utils)
 {
   "print": {
     "prefix": "pewpew.print",
@@ -68,7 +67,7 @@
   "configure_player": {
     "prefix": "pewpew.configure_player",
     "body": "pewpew.configure_player(${1:player_index}, {has_lost = ${2:Boolean}, shield = ${3:Int32}, camera_x_override = ${4:FixedPoint}, camera_y_override = ${5:FixedPoint}, camera_distance = ${6:FixedPoint}, camera_rotation_x_axis = ${7:FixedPoint}, move_joystick_color = ${8:Int32}, shoot_joystick_color = ${9:Int32}})",
-    "description": "Configures the player at the specified `player_index`. `player_index` must in the range [0, get_number_of_players() - 1]. A `camera_distance` less than 0fx makes the camera move away from the ship. `camera_rotation_x_axis` is in radian and rotates along the X axis. To temporarily override the XY position of the camera, set both `camera_x_override` and `camera_y_override`; this will make the camera be interpolated from wherever it was, to that new position."
+    "description": "Configures the player at the specified `player_index`. `player_index` must in the range [0, get_number_of_players() - 1]. A `camera_distance` less than 0fx makes the camera move away from the ship. `camera_rotation_x_axis` is in radian and rotates along the X axis. To temporarily override the XY position of the camera, set **both** `camera_x_override` and `camera_y_override`; this will make the camera be interpolated from wherever it was, to that new position."
   },
   "configure_player_hud": {
     "prefix": "pewpew.configure_player_hud",
@@ -150,6 +149,11 @@
     "body": "pewpew.new_asteroid(${1:x}, ${2:y})",
     "description": "Creates a new Asteroid at the location `x`,`y` and returns its entityId."
   },
+  "new_asteroid_with_size": {
+    "prefix": "pewpew.new_asteroid_with_size",
+    "body": "pewpew.new_asteroid_with_size(${1:x}, ${2:y}, ${3:size})",
+    "description": "Creates a new Asteroid at the location `x`,`y` with an AsteroidSize given by `size` and returns its entityId."
+  },
   "new_baf": {
     "prefix": "pewpew.new_baf",
     "body": "pewpew.new_baf(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:lifetime})",
@@ -182,8 +186,8 @@
   },
   "new_floating_message": {
     "prefix": "pewpew.new_floating_message",
-    "body": "pewpew.new_floating_message(${1:x}, ${2:y}, ${3:str}, {scale = ${4:FixedPoint}, ticks_before_fade = ${5:Int32}})",
-    "description": "Creates a new floating message at the location `x`,`y`, with `str` as the message. The scale is a number that determines how large the  message will be. `1` is the default scale. `ticks_before_fade` determines how many ticks occur before the message starts to fade out. If not specified, `scale` is 1 and `ticks_before_fade` is 30. Returns the floating message's entityId."
+    "body": "pewpew.new_floating_message(${1:x}, ${2:y}, ${3:str}, {scale = ${4:FixedPoint}, ticks_before_fade = ${5:Int32}, is_optional = ${6:Boolean}})",
+    "description": "Creates a new floating message at the location `x`,`y`, with `str` as the message. The scale is a number that determines how large the  message will be. `1` is the default scale. `ticks_before_fade` determines how many ticks occur before the message starts to fade out. `is_optional` can be used to tell the game if the message can be hidden depending on the user's UI settings.If not specified, `scale` is 1, `ticks_before_fade` is 30 and `is_optional` is `false`. Returns the floating message's entityId."
   },
   "new_customizable_entity": {
     "prefix": "pewpew.new_customizable_entity",
@@ -283,7 +287,7 @@
   "entity_react_to_weapon": {
     "prefix": "pewpew.entity_react_to_weapon",
     "body": "pewpew.entity_react_to_weapon(${1:entity_id}, {type = ${2:Int32}, x = ${3:FixedPoint}, y = ${4:FixedPoint}, player_index = ${5:Int32}})",
-    "description": "Makes the entity identified by `id` react to the weapon described in `weapon_description`. Returns whether the entity reacted to the weapon. The returned value is typically used to decide whether the weapon should continue to exist or not. In the case of an explosion, `x` and `y` should store the origin of the explosion. In the case of a bullet, `x` and `y` should store the vector of the bullet."
+    "description": "Makes the entity identified by `id` react to the weapon described in `weapon_description`. Returns whether the entity reacted to the weapon. The returned value is typically used to decide whether the weapon should continue to exist or not. In the case of an explosion, `x` and `y` should store the origin of the explosion. In the case of a bullet, `x` and `y` should store the vector of the bullet. The player identified by `player_index` will be assigned points. If `player_index` is invalid, no player will be assigned points."
   },
   "customizable_entity_set_position_interpolation": {
     "prefix": "pewpew.customizable_entity_set_position_interpolation",

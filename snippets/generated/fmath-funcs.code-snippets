@@ -1,4 +1,3 @@
-// Auto-generated Fmath funcs from ppl-utils (https://github.com/pewpewlive/ppl-utils)
 {
   "max_fixedpoint": {
     "prefix": "fmath.max_fixedpoint",
