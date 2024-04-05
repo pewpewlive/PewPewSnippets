@@ -75,6 +75,6 @@ $pewpew_enums = ConvertTo-Json (Out-Enums $pewpew.name $pewpew.enums)
 $pewpew_functions = ConvertTo-Json (Out-Functions $pewpew.name $pewpew.functions)
 $fmath_functions = ConvertTo-Json (Out-Functions $fmath.name $fmath.functions)
 
-$pewpew_enums | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-enums.code-snippets"
-$pewpew_functions | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-funcs.code-snippets"
-$fmath_functions | Out-File -Encoding utf8 -FilePath "./snippets/generated/fmath-funcs.code-snippets"
+$pewpew_enums | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-enums.json"
+$pewpew_functions | Out-File -Encoding utf8 -FilePath "./snippets/generated/pewpew-funcs.json"
+$fmath_functions | Out-File -Encoding utf8 -FilePath "./snippets/generated/fmath-funcs.json"
