@@ -2,8 +2,8 @@
   "name": "pewpew-snippets",
   "displayName": "PewPew Snippets",
   "description": "An essential tool to any PewPew Live level creator.",
-  "publisher": "TastyKiwi",
-  "version": "2.1.0",
+  "publisher": "HybroidTeam",
+  "version": "2.1.1",
   "engines": {
     "vscode": "^1.53.0"
   },
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "https://github.com/pewpewlive/PewPewSnippets"
   },
-  "homepage": "https://meshstudio.pewpew.live/pps/",
+  "homepage": "https://hybroid.pewpew.live/pps/",
   "bugs": {
     "url": "https://github.com/pewpewlive/PewPewSnippets/issues"
   },

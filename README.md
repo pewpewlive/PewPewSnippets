@@ -1,14 +1,13 @@
 ![PewPewSnippets](assets/icon.png)
 
-[![forthebadge](assets/built-with-love.png)](https://forthebadge.com)
-[![forthebadge](assets/built-for-vs-code.png)](https://forthebadge.com)
-
 # PewPew Snippets
 A code snippet library created for PewPew Live level development.
 
+More information on [Hybroid Team's website](https://hybroid.pewpew.live/pps/).
+
 This repository hosts VS Code snippets. Neovim snippets can be found [here](https://github.com/pewpewlive/ppvs).
 
-**📢 Want more advanced suggestions? Check out [PewPew Types](https://github.com/pewpewlive/PewPew-Types)**
+**📢 Want more advanced suggestions? Check out [PewPew Types](https://github.com/pewpewlive/PewPew-Types)!**
 
 ## Usage:
 Download this extension:
