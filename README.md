@@ -1,7 +1,7 @@
 ![PewPewSnippets](assets/icon.png)
 
 # PewPew Snippets
-A code snippet library created for PewPew Live level development.
+More coding, less referencing the documentation.
 
 More information on [Hybroid Team's website](https://hybroid.pewpew.live/pps/).
 
