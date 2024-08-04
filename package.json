@@ -3,7 +3,7 @@
   "displayName": "PewPew Snippets",
   "description": "More coding, less referencing the documentation.",
   "publisher": "HybroidTeam",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "engines": {
     "vscode": "^1.53.0"
   },
@@ -12,7 +12,6 @@
     "type": "git",
     "url": "https://github.com/pewpewlive/PewPewSnippets"
   },
-  "homepage": "https://hybroid.pewpew.live/pps/",
   "bugs": {
     "url": "https://github.com/pewpewlive/PewPewSnippets/issues"
   },

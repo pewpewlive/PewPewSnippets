@@ -4,8 +4,6 @@
 
 More coding, less referencing the documentation.
 
-More information can be found in [Hybroid Team's website](https://hybroid.pewpew.live/pps/).
-
 This repository hosts VS Code snippets. Neovim snippets can be found [here](https://github.com/pewpewlive/ppvs).
 
 **📢 Want more advanced suggestions? Check out [PewPew Types](https://github.com/pewpewlive/PewPew-Types)!**
