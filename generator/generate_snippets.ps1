@@ -1,5 +1,5 @@
 # PewPew Snippets generator
-# Copyright (c) 2024 PPMS Team & contributors.
+# Copyright (c) 2025 PPMS Team & contributors.
 # This project is licensed under MIT license.
 
 $raw_docs = (Invoke-WebRequest -Uri "https://raw.githubusercontent.com/pewpewlive/ppl-docs/master/raw_documentation.json").Content
