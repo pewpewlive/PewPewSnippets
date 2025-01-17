@@ -84,6 +84,16 @@
     "body": "pewpew.configure_player_ship_weapon(${1:ship_id}, {frequency = ${2:Int32}, cannon = ${3:Int32}, duration = ${4:Int32}})",
     "description": "Configures the weapon of the ship identified with `ship_id` using `configuration`. `frequency` determines the frequency of the shots. `cannon` determines the type of cannon. `duration` determines the number of game ticks during which the weapon will be available. Once the duration expires, the weapon reverts to its permanent configuration. If `duration` is omitted, the weapon will be permanently set to this configuration. If `frequency` or `cannon` is omitted, the ship is configured to not have any weapon."
   },
+  "configure_player_ship_wall_trail": {
+    "prefix": "pewpew.configure_player_ship_wall_trail",
+    "body": "pewpew.configure_player_ship_wall_trail(${1:ship_id}, {wall_length = ${2:Int32}})",
+    "description": "Configures a wall trail that kills everything inside when the ship it is attached to creates a loop with it. `wall_length` is clamped to  [100, 4000]. In symbiosis, the length is 2000. If `wall_length` is not specified, the trail is removed."
+  },
+  "configure_player_ship": {
+    "prefix": "pewpew.configure_player_ship",
+    "body": "pewpew.configure_player_ship(${1:ship_id}, {swap_inputs = ${2:Boolean}})",
+    "description": "Configures various properties of the player ship identified by`id`"
+  },
   "add_damage_to_player_ship": {
     "prefix": "pewpew.add_damage_to_player_ship",
     "body": "pewpew.add_damage_to_player_ship(${1:ship_id}, ${2:damage})",
@@ -144,6 +154,11 @@
     "body": "pewpew.create_explosion(${1:x}, ${2:y}, ${3:color}, ${4:scale}, ${5:particle_count})",
     "description": "Creates an explosion of particles at the location `x`,`y`. `color` specifies the color of the explosion. `scale` describes how large the explosion will be. It should be in the range ]0, 10], with 1 being an average explosion. `particle_count` specifies the number of particles that make up the explosion. It must be in the range [1, 100]."
   },
+  "add_particle": {
+    "prefix": "pewpew.add_particle",
+    "body": "pewpew.add_particle(${1:x}, ${2:y}, ${3:z}, ${4:dx}, ${5:dy}, ${6:dz}, ${7:color}, ${8:duration})",
+    "description": "Adds a particle at the given position, that moves at the given speed, with the given color and duration. The engine may not spawn all particles if are already a lot of particles alive already spawned (e.g. more than 1000)"
+  },
   "new_asteroid": {
     "prefix": "pewpew.new_asteroid",
     "body": "pewpew.new_asteroid(${1:x}, ${2:y})",
@@ -186,7 +201,7 @@
   },
   "new_floating_message": {
     "prefix": "pewpew.new_floating_message",
-    "body": "pewpew.new_floating_message(${1:x}, ${2:y}, ${3:str}, {scale = ${4:FixedPoint}, ticks_before_fade = ${5:Int32}, is_optional = ${6:Boolean}})",
+    "body": "pewpew.new_floating_message(${1:x}, ${2:y}, ${3:str}, {scale = ${4:FixedPoint}, dz = ${5:FixedPoint}, ticks_before_fade = ${6:Int32}, is_optional = ${7:Boolean}})",
     "description": "Creates a new floating message at the location `x`,`y`, with `str` as the message. The scale is a number that determines how large the  message will be. `1` is the default scale. `ticks_before_fade` determines how many ticks occur before the message starts to fade out. `is_optional` can be used to tell the game if the message can be hidden depending on the user's UI settings.If not specified, `scale` is 1, `ticks_before_fade` is 30 and `is_optional` is `false`. Returns the floating message's entityId."
   },
   "new_customizable_entity": {
@@ -199,15 +214,30 @@
     "body": "pewpew.new_inertiac(${1:x}, ${2:y}, ${3:acceleration}, ${4:angle})",
     "description": "Creates a new Inertiac at the location `x`,`y`, and returns its entityId. The inertiac will accelerate according to `acceleration`. It spawns with a random velocity in a direction specified by `angle`."
   },
+  "new_kamikaze": {
+    "prefix": "pewpew.new_kamikaze",
+    "body": "pewpew.new_kamikaze(${1:x}, ${2:y}, ${3:angle})",
+    "description": "Creates a new Kamikaze at the location `x`,`y` that starts moving in the direction specified by `angle`."
+  },
   "new_mothership": {
     "prefix": "pewpew.new_mothership",
     "body": "pewpew.new_mothership(${1:x}, ${2:y}, ${3:type}, ${4:angle})",
     "description": "Creates a new Mothership at the location `x`,`y`, and returns its entityId."
   },
+  "new_mothership_bullet": {
+    "prefix": "pewpew.new_mothership_bullet",
+    "body": "pewpew.new_mothership_bullet(${1:x}, ${2:y}, ${3:angle}, ${4:speed}, ${5:color}, ${6:large})",
+    "description": "Creates a new mothership bullet."
+  },
   "new_pointonium": {
     "prefix": "pewpew.new_pointonium",
     "body": "pewpew.new_pointonium(${1:x}, ${2:y}, ${3:value})",
     "description": "Creates a new Pointonium at the location `x`,`y`. Value must be 64, 128, or 256."
+  },
+  "new_plasma_field": {
+    "prefix": "pewpew.new_plasma_field",
+    "body": "pewpew.new_plasma_field(${1:ship_a_id}, ${2:ship_b_id}, {length = ${3:FixedPoint}})",
+    "description": "Creates a new plasma field between `ship_a` and `ship_b`, and returns its entityId. If `ship_a` or `ship_b` is destroyed, the plasma field is destroyed as well."
   },
   "new_player_ship": {
     "prefix": "pewpew.new_player_ship",
@@ -228,6 +258,16 @@
     "prefix": "pewpew.new_rolling_sphere",
     "body": "pewpew.new_rolling_sphere(${1:x}, ${2:y}, ${3:angle}, ${4:speed})",
     "description": "Creates a new Rolling Sphere at the location `x`,`y`, and returns its entityId."
+  },
+  "new_spiny": {
+    "prefix": "pewpew.new_spiny",
+    "body": "pewpew.new_spiny(${1:x}, ${2:y}, ${3:angle}, ${4:attractivity})",
+    "description": "Creates a new Spiny at the location `x`,`y` that starts moving in the direction specified by `angle`. `attractivity` specifies how much the Spiny is attracted to the closest player: 1fx is normal attractivity."
+  },
+  "new_super_mothership": {
+    "prefix": "pewpew.new_super_mothership",
+    "body": "pewpew.new_super_mothership(${1:x}, ${2:y}, ${3:type}, ${4:angle})",
+    "description": "Creates a new Super Mothership at the location `x`,`y`, and returns its entityId."
   },
   "new_wary": {
     "prefix": "pewpew.new_wary",
@@ -289,10 +329,20 @@
     "body": "pewpew.entity_react_to_weapon(${1:entity_id}, {type = ${2:Int32}, x = ${3:FixedPoint}, y = ${4:FixedPoint}, player_index = ${5:Int32}})",
     "description": "Makes the entity identified by `id` react to the weapon described in `weapon_description`. Returns whether the entity reacted to the weapon. The returned value is typically used to decide whether the weapon should continue to exist or not. In the case of an explosion, `x` and `y` should store the origin of the explosion. In the case of a bullet, `x` and `y` should store the vector of the bullet. The player identified by `player_index` will be assigned points. If `player_index` is invalid, no player will be assigned points."
   },
+  "entity_add_mace": {
+    "prefix": "pewpew.entity_add_mace",
+    "body": "pewpew.entity_add_mace(${1:target_id}, {distance = ${2:FixedPoint}, angle = ${3:FixedPoint}, rotation_speed = ${4:FixedPoint}, type = ${5:Int32}})",
+    "description": "Adds a mace to the entity identified with `entity_id`. If `rotation_speed` exists, the mace will have a natural rotation, otherwise it will move due to inertia."
+  },
   "customizable_entity_set_position_interpolation": {
     "prefix": "pewpew.customizable_entity_set_position_interpolation",
     "body": "pewpew.customizable_entity_set_position_interpolation(${1:entity_id}, ${2:enable})",
-    "description": "Sets whether the position of the mesh wil be interpolated when rendering. In general, this should be set to true if the entity will be moving smoothly."
+    "description": "Sets whether the position of the mesh wil be interpolated when rendering. In general, this should be set to true if the entity will be moving."
+  },
+  "customizable_entity_set_angle_interpolation": {
+    "prefix": "pewpew.customizable_entity_set_angle_interpolation",
+    "body": "pewpew.customizable_entity_set_angle_interpolation(${1:entity_id}, ${2:enable})",
+    "description": "Sets whether the angle of the mesh wil be interpolated when rendering. Angle interpolation is enabled by default."
   },
   "customizable_entity_set_mesh": {
     "prefix": "pewpew.customizable_entity_set_mesh",
@@ -342,7 +392,7 @@
   "customizable_entity_skip_mesh_attributes_interpolation": {
     "prefix": "pewpew.customizable_entity_skip_mesh_attributes_interpolation",
     "body": "pewpew.customizable_entity_skip_mesh_attributes_interpolation(${1:entity_id})",
-    "description": "Skips the interpolation of the mesh's attributes (x, y, z, scale_x, scale_y, scale_z, rotation)."
+    "description": "Skips the interpolation of the mesh's attributes (x, y, z, scale_x, scale_y, scale_z, rotation) for one tick. Only applies to the attributes that were set before the call to `customizable_entity_skip_mesh_attributes_interpolation`"
   },
   "customizable_entity_configure_music_response": {
     "prefix": "pewpew.customizable_entity_configure_music_response",
@@ -383,5 +433,15 @@
     "prefix": "pewpew.customizable_entity_start_exploding",
     "body": "pewpew.customizable_entity_start_exploding(${1:entity_id}, ${2:explosion_duration})",
     "description": "Makes the customizable entity identified by `id` explode for a duration of `explosion_duration` game ticks. After the explosion, the entity is destroyed. `explosion_duration` must be less than 255. Any scale applied to the entity is also applied to the explosion."
+  },
+  "customizable_entity_set_tag": {
+    "prefix": "pewpew.customizable_entity_set_tag",
+    "body": "pewpew.customizable_entity_set_tag(${1:entity_id}, ${2:tag})",
+    "description": "Sets a tag on customizable entities. The tag can be read back with `customizable_entity_get_tag`."
+  },
+  "customizable_entity_get_tag": {
+    "prefix": "pewpew.customizable_entity_get_tag",
+    "body": "pewpew.customizable_entity_get_tag(${1:entity_id})",
+    "description": "Returns the tag that was set, or 0 if no tag was set."
   }
 }

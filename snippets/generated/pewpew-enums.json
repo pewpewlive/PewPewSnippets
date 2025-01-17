@@ -67,6 +67,14 @@
     "prefix": "pewpew.EntityType.UFO_BULLET",
     "body": "pewpew.EntityType.UFO_BULLET"
   },
+  "EntityType_SPINY": {
+    "prefix": "pewpew.EntityType.SPINY",
+    "body": "pewpew.EntityType.SPINY"
+  },
+  "EntityType_SUPER_MOTHERSHIP": {
+    "prefix": "pewpew.EntityType.SUPER_MOTHERSHIP",
+    "body": "pewpew.EntityType.SUPER_MOTHERSHIP"
+  },
   "EntityType_PLAYER_BULLET": {
     "prefix": "pewpew.EntityType.PLAYER_BULLET",
     "body": "pewpew.EntityType.PLAYER_BULLET"
@@ -91,9 +99,21 @@
     "prefix": "pewpew.EntityType.POINTONIUM",
     "body": "pewpew.EntityType.POINTONIUM"
   },
+  "EntityType_KAMIKAZE": {
+    "prefix": "pewpew.EntityType.KAMIKAZE",
+    "body": "pewpew.EntityType.KAMIKAZE"
+  },
   "EntityType_BONUS_IMPLOSION": {
     "prefix": "pewpew.EntityType.BONUS_IMPLOSION",
     "body": "pewpew.EntityType.BONUS_IMPLOSION"
+  },
+  "EntityType_MACE": {
+    "prefix": "pewpew.EntityType.MACE",
+    "body": "pewpew.EntityType.MACE"
+  },
+  "EntityType_PLASMA_FIELD": {
+    "prefix": "pewpew.EntityType.PLASMA_FIELD",
+    "body": "pewpew.EntityType.PLASMA_FIELD"
   },
   "MothershipType_THREE_CORNERS": {
     "prefix": "pewpew.MothershipType.THREE_CORNERS",
@@ -142,6 +162,14 @@
   "CannonType_HEMISPHERE": {
     "prefix": "pewpew.CannonType.HEMISPHERE",
     "body": "pewpew.CannonType.HEMISPHERE"
+  },
+  "CannonType_SHOTGUN": {
+    "prefix": "pewpew.CannonType.SHOTGUN",
+    "body": "pewpew.CannonType.SHOTGUN"
+  },
+  "CannonType_LASER": {
+    "prefix": "pewpew.CannonType.LASER",
+    "body": "pewpew.CannonType.LASER"
   },
   "CannonFrequency_FREQ_30": {
     "prefix": "pewpew.CannonFrequency.FREQ_30",
@@ -199,6 +227,14 @@
     "prefix": "pewpew.BombType.SMALL_FREEZE",
     "body": "pewpew.BombType.SMALL_FREEZE"
   },
+  "MaceType_DAMAGE_PLAYERS": {
+    "prefix": "pewpew.MaceType.DAMAGE_PLAYERS",
+    "body": "pewpew.MaceType.DAMAGE_PLAYERS"
+  },
+  "MaceType_DAMAGE_ENTITIES": {
+    "prefix": "pewpew.MaceType.DAMAGE_ENTITIES",
+    "body": "pewpew.MaceType.DAMAGE_ENTITIES"
+  },
   "BonusType_REINSTANTIATION": {
     "prefix": "pewpew.BonusType.REINSTANTIATION",
     "body": "pewpew.BonusType.REINSTANTIATION"
@@ -215,6 +251,10 @@
     "prefix": "pewpew.BonusType.WEAPON",
     "body": "pewpew.BonusType.WEAPON"
   },
+  "BonusType_MACE": {
+    "prefix": "pewpew.BonusType.MACE",
+    "body": "pewpew.BonusType.MACE"
+  },
   "WeaponType_BULLET": {
     "prefix": "pewpew.WeaponType.BULLET",
     "body": "pewpew.WeaponType.BULLET"
@@ -230,6 +270,18 @@
   "WeaponType_ATOMIZE_EXPLOSION": {
     "prefix": "pewpew.WeaponType.ATOMIZE_EXPLOSION",
     "body": "pewpew.WeaponType.ATOMIZE_EXPLOSION"
+  },
+  "WeaponType_PLASMA_FIELD": {
+    "prefix": "pewpew.WeaponType.PLASMA_FIELD",
+    "body": "pewpew.WeaponType.PLASMA_FIELD"
+  },
+  "WeaponType_WALL_TRAIL_LASSO": {
+    "prefix": "pewpew.WeaponType.WALL_TRAIL_LASSO",
+    "body": "pewpew.WeaponType.WALL_TRAIL_LASSO"
+  },
+  "WeaponType_MACE": {
+    "prefix": "pewpew.WeaponType.MACE",
+    "body": "pewpew.WeaponType.MACE"
   },
   "AsteroidSize_SMALL": {
     "prefix": "pewpew.AsteroidSize.SMALL",
