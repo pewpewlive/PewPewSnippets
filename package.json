@@ -3,7 +3,7 @@
   "displayName": "PewPew Snippets",
   "description": "More coding, less referencing the documentation.",
   "publisher": "HybroidTeam",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "engines": {
     "vscode": "^1.53.0"
   },
