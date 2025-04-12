@@ -12,8 +12,8 @@ This repository hosts VS Code snippets. Neovim snippets can be found [here](http
 
 Download this extension:
 
-- Visual Studio Code marketplace: [Download here](https://marketplace.visualstudio.com/items?itemName=HybroidTeam.pewpewsnippets)
-- `.vsix` extension: [GitHub Releases](https://github.com/Tasty-Kiwi/Pewhelp-vscode/releases)
+- Visual Studio Code marketplace [Official VS Code only](https://x.com/krzyzanowskim/status/1847000441898652093): [Download here](https://marketplace.visualstudio.com/items?itemName=HybroidTeam.pewpewsnippets)
+- `.vsix` extension (For VS Code offline installation, Cursor, Windsurf, VSCodium and other VS Code forks): [GitHub Releases]([https://github.com/Tasty-Kiwi/Pewhelp-vscode/releases](https://github.com/pewpewlive/PewPewSnippets/releases/latest))
 
 ## Building it
 
