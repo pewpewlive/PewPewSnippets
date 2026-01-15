@@ -115,6 +115,22 @@
     "prefix": "pewpew.EntityType.PLASMA_FIELD",
     "body": "pewpew.EntityType.PLASMA_FIELD"
   },
+  "EntityType_LASERBEAM": {
+    "prefix": "pewpew.EntityType.LASERBEAM",
+    "body": "pewpew.EntityType.LASERBEAM"
+  },
+  "EntityType_EXPLODER": {
+    "prefix": "pewpew.EntityType.EXPLODER",
+    "body": "pewpew.EntityType.EXPLODER"
+  },
+  "EntityType_EXPLODER_EXPLOSION": {
+    "prefix": "pewpew.EntityType.EXPLODER_EXPLOSION",
+    "body": "pewpew.EntityType.EXPLODER_EXPLOSION"
+  },
+  "EntityType_WEAPON_ZONE": {
+    "prefix": "pewpew.EntityType.WEAPON_ZONE",
+    "body": "pewpew.EntityType.WEAPON_ZONE"
+  },
   "MothershipType_THREE_CORNERS": {
     "prefix": "pewpew.MothershipType.THREE_CORNERS",
     "body": "pewpew.MothershipType.THREE_CORNERS"

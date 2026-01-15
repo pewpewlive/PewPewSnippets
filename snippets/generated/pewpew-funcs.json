@@ -12,7 +12,7 @@
   "set_level_size": {
     "prefix": "pewpew.set_level_size",
     "body": "pewpew.set_level_size(${1:width}, ${2:height})",
-    "description": "Sets the level's size. Implicetely adds walls to make sure that entities can not go outside of the level's boundaries. `width` and `height` are clamped to the range ]0fx, 6000fx]. If this function is not called, the level size is (10fx, 10fx), which is uselessly small for most cases."
+    "description": "Sets the level's size. Implicitly adds walls to make sure that entities can not go outside of the level's boundaries. `width` and `height` are clamped to the range ]0fx, 6000fx]. If this function is not called, the level size is (10fx, 10fx), which is uselessly small for most cases."
   },
   "add_wall": {
     "prefix": "pewpew.add_wall",
@@ -87,7 +87,7 @@
   "configure_player_ship_wall_trail": {
     "prefix": "pewpew.configure_player_ship_wall_trail",
     "body": "pewpew.configure_player_ship_wall_trail(${1:ship_id}, {wall_length = ${2:Int32}})",
-    "description": "Configures a wall trail that kills everything inside when the ship it is attached to creates a loop with it. `wall_length` is clamped to  [100, 4000]. In symbiosis, the length is 2000. If `wall_length` is not specified, the trail is removed."
+    "description": "Configures a wall trail that kills everything inside when the ship it is attached to creates a loop with it. `wall_length` is clamped to  [100, 4000]. In Partitioner, the length is 2000. If `wall_length` is not specified, the trail is removed."
   },
   "configure_player_ship": {
     "prefix": "pewpew.configure_player_ship",
@@ -236,8 +236,8 @@
   },
   "new_plasma_field": {
     "prefix": "pewpew.new_plasma_field",
-    "body": "pewpew.new_plasma_field(${1:ship_a_id}, ${2:ship_b_id}, {length = ${3:FixedPoint}})",
-    "description": "Creates a new plasma field between `ship_a` and `ship_b`, and returns its entityId. If `ship_a` or `ship_b` is destroyed, the plasma field is destroyed as well."
+    "body": "pewpew.new_plasma_field(${1:ship_a_id}, ${2:ship_b_id}, {length = ${3:FixedPoint}, stiffness = ${4:FixedPoint}})",
+    "description": "Creates a new plasma field between `ship_a` and `ship_b`, and returns its entityId. If `ship_a` or `ship_b` is destroyed, the plasma field is destroyed as well. `length` is optional, and specifies the length of the plasma field (defaut is 150). `stiffness` is optional, and specifies the stiffness of the plasma field (default is 1)"
   },
   "new_player_ship": {
     "prefix": "pewpew.new_player_ship",
@@ -279,6 +279,11 @@
     "body": "pewpew.new_ufo(${1:x}, ${2:y}, ${3:dx})",
     "description": "Creates a new UFO at the location `x`,`y` moving horizontally at the speed of `dx`, and returns its entityId."
   },
+  "new_weapon_zone": {
+    "prefix": "pewpew.new_weapon_zone",
+    "body": "pewpew.new_weapon_zone(${1:x}, ${2:y}, ${3:cannon}, ${4:frequency}, {radius = ${5:FixedPoint}, number_of_sides = ${6:Int32}})",
+    "description": "Creates a new Weapon Zone at the location `x`,`y` with the respective weapon configuration, and another optional configuration table, that has the following keys:- `number_of_sides` - number of sides for the zone (default 12), right now *only* supports a value of 6.- `radius` - the radius in fx of the weapon zone (default 80fx).Default behavior of leaving a Weapon Zone is to *reset* the weapon configuration of each ship to **no** weapon!"
+  },
   "rolling_cube_set_enable_collisions_with_walls": {
     "prefix": "pewpew.rolling_cube_set_enable_collisions_with_walls",
     "body": "pewpew.rolling_cube_set_enable_collisions_with_walls(${1:entity_id}, ${2:collide_with_walls})",
@@ -308,6 +313,11 @@
     "prefix": "pewpew.entity_set_position",
     "body": "pewpew.entity_set_position(${1:entity_id}, ${2:x}, ${3:y})",
     "description": "Sets the position of the entity identified by `id` to `x`,`y`"
+  },
+  "entity_move": {
+    "prefix": "pewpew.entity_move",
+    "body": "pewpew.entity_move(${1:entity_id}, ${2:dx}, ${3:dy})",
+    "description": "Attempts to move the entity identified by `id` by `dx`,`dy`. Movement will be blocked by walls."
   },
   "entity_set_radius": {
     "prefix": "pewpew.entity_set_radius",
@@ -367,7 +377,7 @@
   "customizable_entity_set_mesh_xyz": {
     "prefix": "pewpew.customizable_entity_set_mesh_xyz",
     "body": "pewpew.customizable_entity_set_mesh_xyz(${1:entity_id}, ${2:x}, ${3:y}, ${4:z})",
-    "description": "Sets the position of the mesh to x,y,z, relative to the center ofthe customizable entity identified by `id`"
+    "description": "Sets the position of the mesh to x,y,z, relative to the center of the customizable entity identified by `id`"
   },
   "customizable_entity_set_mesh_z": {
     "prefix": "pewpew.customizable_entity_set_mesh_z",
@@ -412,7 +422,7 @@
   "customizable_entity_configure_wall_collision": {
     "prefix": "pewpew.customizable_entity_configure_wall_collision",
     "body": "pewpew.customizable_entity_configure_wall_collision(${1:entity_id}, ${2:collide_with_walls}, ${3:collision_callback})",
-    "description": "`collide_with_walls` configures whether the entity should stop when colliding with walls. If `collision_callback` is not nil, it is called anytime a collision is detected. The callback gets called with the entity id of the entity withthe callback, and with the normal to the wall."
+    "description": "`collide_with_walls` configures whether the entity should stop when colliding with walls. If `collision_callback` is not nil, it is called anytime a collision is detected. The callback gets called with the entity id of the entity with the callback, and with the normal to the wall."
   },
   "customizable_entity_set_player_collision_callback": {
     "prefix": "pewpew.customizable_entity_set_player_collision_callback",
