@@ -191,7 +191,7 @@
   },
   "new_bonus": {
     "prefix": "pewpew.new_bonus",
-    "body": "pewpew.new_bonus(${1:x}, ${2:y}, ${3:type}, {box_duration = ${4:Int32}, cannon = ${5:Int32}, frequency = ${6:Int32}, weapon_duration = ${7:Int32}, number_of_shields = ${8:Int32}, speed_factor = ${9:FixedPoint}, speed_offset = ${10:FixedPoint}, speed_duration = ${11:Int32}, taken_callback = ${12:Callback}})",
+    "body": "pewpew.new_bonus(${1:x}, ${2:y}, ${3:type}, {box_duration = ${4:Int32}, cannon = ${5:Int32}, frequency = ${6:Int32}, weapon_duration = ${7:Int32}, number_of_shields = ${8:Int32}, speed_factor = ${9:FixedPoint}, speed_offset = ${10:FixedPoint}, speed_duration = ${11:Int32}, mace_radius = ${12:FixedPoint}, mace_rotation = ${13:FixedPoint}, mace_duration = ${14:Int32}, taken_callback = ${15:Callback}})",
     "description": "Creates a new Bonus at the location `x`,`y` of the type `type`, and returns its entityId. For shield bonuses, the option `number_of_shields` determines how many shields are given out. For weapon bonuses, the options `cannon`, `frequency`, `weapon_duration` have the same meaning as in `pewpew.configure_player_ship_weapon`. For speed bonuses, the options `speed_factor`, `speed_offset`,and `speed_duration` have the same meaning as in `set_player_speed`. `taken_callback` is called when the bonus is taken, and is mandatory for the reinstantiation bonus. The callback receives as arguments the entity id of the bonus, the player id, and the ship's entity id. The default box duration is 400 ticks."
   },
   "new_crowder": {
@@ -432,7 +432,7 @@
   "customizable_entity_set_weapon_collision_callback": {
     "prefix": "pewpew.customizable_entity_set_weapon_collision_callback",
     "body": "pewpew.customizable_entity_set_weapon_collision_callback(${1:entity_id}, ${2:weapon_collision_callback})",
-    "description": "Sets the callback for when the customizable entity identified by `id` collides with a player's weapon. The callback gets called with the entity_id of the entity on which the callback is set, the player_index of the player that triggered the weapon, and the type of the weapon. The callback *must* return a boolean saying whether the entity reacts to the weapon. In the case of a bullet, this boolean determines whether the bullet should be destroyed."
+    "description": "Sets the callback for when the customizable entity identified by `id` collides with a player's weapon. The callback gets called with the entity_id of the entity on which the callback is set, the player_index of the player that triggered the weapon, the type of the weapon, and the respective x and y parameters of a weapon: for bullets thats the movement vector, for explosions thats the position of the bomb. The callback *must* return a boolean saying whether the entity reacts to the weapon. In the case of a bullet, this boolean determines whether the bullet should be destroyed."
   },
   "customizable_entity_start_spawning": {
     "prefix": "pewpew.customizable_entity_start_spawning",
